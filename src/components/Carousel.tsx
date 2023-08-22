@@ -152,7 +152,7 @@ const PortfolioCarousel = () => {
               <div
                 data-scroll
                 data-scroll-speed="0.3"
-                className="img-text poppins text-[burlywood]"
+                className="img-text poppins text-[burlywood] text-[#F7F9F9]"
               >
                Software Engineering
               </div>
