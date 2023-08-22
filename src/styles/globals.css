@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase&display=swap');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,10 +21,146 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: 'Poppins', sans-serif;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-top: 10rem;
+}
+
+.swiper-wrapper {
+  max-height: 35rem !important;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  color: burlywood;
+}
+
+.swiper-button-prev::after,
+.swiper-rtl .swiper-button-next:after {
+  color: burlywood;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: burlywood;
+}
+
+.swiper-scrollbar-drag {
+  background-color: burlywood !important;
+}
+
+/* FONTS */
+.delius {
+  font-family: 'Delius Unicase', cursive;
+}
+
+.poppin {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* IMAGES */
+figure {
+	width: 100%;
+	height: 30rem;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+  margin-bottom: 60px;
+}
+figure:hover+span {
+	bottom: -36px;
+	opacity: 1;
+}
+
+/* HOVER EFFECTS */
+.img-container{
+  position: relative;
+
+}
+.img-text{
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Move it to the middle horizontally */
+  transform: translateX(-50%); /* Center it horizontally */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-weight: 100;
+  visibility: hidden;
+  opacity: 0; 
+  transition: visibility 0s, opacity 0.5s; 
+}
+.img-container:hover .img-text {
+  visibility: visible; 
+  opacity: 1
+}
+.img-hover figure img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
+}
+.img-hover figure:hover img {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+@media only screen and (min-width: 769px) {
+  .swiper-slide:first-child {
+    transition: transform 100ms;
+  }
+
+  .swiper-slide:first-child img {
+    transition: box-shadow 500ms;
+  }
+
+  .swiper-slide.swiper-slide-active:first-child {
+    transform: translateX(50%);
+    z-index: 2;
+  }
+
+  .swiper-slide.swiper-slide-active:first-child img {
+    box-shadow: 0px 32px 80px rgba(0, 0, 0, 0.35);
+  }
+
+  .swiper-slide:nth-child(2) {
+    transition: transform 100ms;
+  }
+
+  .swiper-slide.swiper-slide-next:nth-child(2) {
+    transform: translateX(55%);
+    z-index: 1;
+  }
+
+  .swiper[dir="rtl"] .swiper-slide.swiper-slide-active:first-child {
+    transform: translateX(-50%);
+  }
+
+  .swiper[dir="rtl"] .swiper-slide.swiper-slide-next:nth-child(2) {
+    transform: translateX(-55%);
+  }
 }
