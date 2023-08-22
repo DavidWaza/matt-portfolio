@@ -4,6 +4,7 @@ import PortfolioCarousel from "@/components/Carousel";
 import Loading from "@/components/loading";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 
+
 export default function Home() {
   return (
     <main>

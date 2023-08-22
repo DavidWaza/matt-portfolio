@@ -8,6 +8,8 @@ import "swiper/css/pagination";
 import localFont from "next/font/local";
 import "@/styles/styles.module.css";
 import "swiper/css";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 import {
   Autoplay,
@@ -56,108 +58,124 @@ const PortfolioCarousel = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="bg-[black]">
-            <div className="p-10">
-              <p className="text-[#939393] mt-3 font-[700] text-[50px]">
-                Hello,
-              </p>
-              <p className=" text-[#939393] font-[300] text-[30px]">
-                Im{" "}
-                <span className="text-[burlywood] poppins">
-                  {" "}
-                  Damilare Kolawole
-                </span>
-              </p>
-              <p
-                className="text-[#939393] mt-3 w-[100%] leading-7 text-[20px] poppins"
-                style={myFonts.style}
-              >
-                I am a serial Entrepreneur, Photographer, event planner. i
-                provide high quality services. welcome to my portfolio. This
-                would be the most entertaining site i do have. Thanks to Waza
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="img-container">
-            <div className="img-hover">
-              <figure>
-                <img src="/assets/matts.jpg" />
-              </figure>
-              <div
-                data-scroll
-                data-scroll-speed="0.3"
-                className="img-text poppins text-[burlywood]"
-              >
-                Photography
+          {(
+            <div className="bg-[black]">
+              <div className="p-10">
+                <p className="text-[#939393] mt-3 font-[700] text-[50px]">
+                  Hello,
+                </p>
+                <p className=" text-[#939393] font-[300] text-[30px]">
+                  Im{" "}
+                  <span className="text-[burlywood] poppins">
+                    {" "}
+                    Damilare Kolawole
+                  </span>
+                </p>
+                <p
+                  className="text-[#939393] mt-3 w-[100%] leading-7 text-[20px] poppins"
+                  style={myFonts.style}
+                >
+                  I am a serial Entrepreneur, Photographer, event planner. i
+                  provide high quality services. welcome to my portfolio. This
+                  would be the most entertaining site i do have. Thanks to Waza
+                </p>
               </div>
             </div>
-          </div>
+          ) || (
+            <SkeletonTheme baseColor="#202020" highlightColor="#444">
+              <Skeleton count={20} />
+            </SkeletonTheme>
+          )}
         </SwiperSlide>
         <SwiperSlide>
-          <div className="img-container">
-            <div className="img-hover">
-              <figure>
-                <img src="/assets/diamond-ring.jpg" />
-              </figure>
-              <div
-                data-scroll
-                data-scroll-speed="0.3"
-                className="img-text poppins text-white"
-              >
-                Diamonds
+          {(
+            <div className="img-container">
+              <div className="img-hover">
+                <figure>
+                  <img src="/assets/matts.jpg" />
+                </figure>
+                <div
+                  data-scroll
+                  data-scroll-speed="0.3"
+                  className="img-text poppins text-[burlywood]"
+                >
+                  <p>{`Photography`}</p>
+                </div>
               </div>
             </div>
-          </div>
+          ) || <Skeleton />}
         </SwiperSlide>
         <SwiperSlide>
-          <div className="img-container">
-            <div className="img-hover">
-              <figure>
-                <img src="/assets/gemstone.jpg" />
-              </figure>
-              <div
-                data-scroll
-                data-scroll-speed="0.3"
-                className="img-text poppins text-[#4a2c2a]"
-              >
-                Gem Stones
+          {(
+            <div className="img-container">
+              <div className="img-hover">
+                <figure>
+                  <img src="/assets/diamond-ring.jpg" />
+                </figure>
+                <div
+                  data-scroll
+                  data-scroll-speed="0.3"
+                  className="img-text poppins text-white"
+                >
+                  Diamonds
+                </div>
               </div>
             </div>
-          </div>
+          ) || <Skeleton />}
         </SwiperSlide>
         <SwiperSlide>
-          <div className="img-container">
-            <div className="img-hover">
-              <figure>
-                <img src="/assets/e-commerce.jpg" />
-              </figure>
-              <div
-                data-scroll
-                data-scroll-speed="0.3"
-                className="img-text poppins text-[burlywood]"
-              >
-               E-commerce
+          {(
+            <div className="img-container">
+              <div className="img-hover">
+                <figure>
+                  <img src="/assets/gemstone.jpg" />
+                </figure>
+                <div
+                  data-scroll
+                  data-scroll-speed="0.3"
+                  className="img-text poppins text-[#4a2c2a]"
+                >
+                  Gem Stones
+                </div>
               </div>
             </div>
-          </div>
+          ) || <Skeleton />}
         </SwiperSlide>
         <SwiperSlide>
-          <div className="img-container">
-            <div className="img-hover">
-              <figure>
-                <img src="/assets/frontend.jpg" />
-              </figure>
-              <div
-                data-scroll
-                data-scroll-speed="0.3"
-                className="img-text poppins text-[burlywood] text-[#F7F9F9]"
-              >
-               Software Engineering
+          {(
+            <div className="img-container">
+              <div className="img-hover">
+                <figure>
+                  <img src="/assets/e-commerce.jpg" />
+                </figure>
+                <div
+                  data-scroll
+                  data-scroll-speed="0.3"
+                  className="img-text poppins text-[burlywood]"
+                >
+                  E-commerce
+                </div>
               </div>
             </div>
-          </div>
+          ) || <Skeleton />}
+        </SwiperSlide>
+        <SwiperSlide>
+          {(
+            <div className="img-container">
+              <div className="img-hover">
+                <figure>
+                  <img src="/assets/frontend.jpg" />
+                </figure>
+                <div
+                  data-scroll
+                  data-scroll-speed="0.3"
+                  className="img-text poppins text-[burlywood] text-[#F7F9F9]"
+                >
+                  Software Engineering
+                </div>
+              </div>
+            </div>
+          ) || <Skeleton />}
         </SwiperSlide>
       </Swiper>
     </>
