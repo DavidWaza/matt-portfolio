@@ -99,7 +99,7 @@ const PortfolioCarousel = () => {
           <div className="img-container">
             <div className="img-hover">
               <figure>
-                <img src="/assets/diamond.jpg" />
+                <img src="/assets/diamond-ring.jpg" />
               </figure>
               <div
                 data-scroll
@@ -139,6 +139,22 @@ const PortfolioCarousel = () => {
                 className="img-text poppins text-[burlywood]"
               >
                E-commerce
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="img-container">
+            <div className="img-hover">
+              <figure>
+                <img src="/assets/frontend.jpg" />
+              </figure>
+              <div
+                data-scroll
+                data-scroll-speed="0.3"
+                className="img-text poppins text-[burlywood]"
+              >
+               Software Engineering
               </div>
             </div>
           </div>
