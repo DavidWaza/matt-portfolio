@@ -69,7 +69,7 @@ const PortfolioCarousel = () => {
                 </span>
               </p>
               <p
-                className="text-[#939393] mt-3 w-[100%] leading-7 text-[24px] poppins"
+                className="text-[#939393] mt-3 w-[90%] leading-7 text-[20px] poppins"
                 style={myFonts.style}
               >
                 I am a serial Entrepreneur, Photographer, event planner. i
