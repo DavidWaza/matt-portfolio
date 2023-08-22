@@ -48,10 +48,10 @@ const PortfolioCarousel = () => {
         pagination={{
           clickable: true,
         }}
-        // autoplay={{
-        //   delay: 3500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
         modules={[Autoplay, Keyboard, Scrollbar, Navigation, Pagination]}
         className="mySwiper"
       >
@@ -62,7 +62,7 @@ const PortfolioCarousel = () => {
                 Hello,
               </p>
               <p className=" text-[#939393] font-[300] text-[30px]">
-                I'm{" "}
+                Im{" "}
                 <span className="text-[burlywood] poppins">
                   {" "}
                   Damilare Kolawole
