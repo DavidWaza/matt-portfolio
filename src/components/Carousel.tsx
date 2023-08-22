@@ -48,10 +48,10 @@ const PortfolioCarousel = () => {
         pagination={{
           clickable: true,
         }}
-        autoplay={{
-          delay: 3500,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 3500,
+        //   disableOnInteraction: false,
+        // }}
         modules={[Autoplay, Keyboard, Scrollbar, Navigation, Pagination]}
         className="mySwiper"
       >
