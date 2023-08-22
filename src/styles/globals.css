@@ -82,12 +82,12 @@ body {
 /* IMAGES */
 figure {
 	width: 100%;
-	height: 30rem;
+	height: 31rem;
 	margin: 0;
 	padding: 0;
 	background: #fff;
 	overflow: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 figure:hover+span {
 	bottom: -36px;
