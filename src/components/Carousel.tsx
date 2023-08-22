@@ -48,10 +48,10 @@ const PortfolioCarousel = () => {
         pagination={{
           clickable: true,
         }}
-        // autoplay={{
-        //   delay: 3500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 5500,
+          disableOnInteraction: false,
+        }}
         modules={[Autoplay, Keyboard, Scrollbar, Navigation, Pagination]}
         className="mySwiper"
       >
@@ -90,7 +90,7 @@ const PortfolioCarousel = () => {
                 data-scroll-speed="0.3"
                 className="img-text poppins text-[burlywood]"
               >
-                Photograpghy
+                Photography
               </div>
             </div>
           </div>

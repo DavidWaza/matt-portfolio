@@ -19,6 +19,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
@@ -113,11 +117,13 @@ figure:hover+span {
   font-weight: 100;
   visibility: hidden;
   opacity: 0; 
-  transition: visibility 0s, opacity 0.5s; 
+  transition: all 0.5s ease-in;
+  
 }
 .img-container:hover .img-text {
   visibility: visible; 
-  opacity: 1
+  opacity: 1;
+  transition: all 0.5s ease-in;
 }
 .img-hover figure img {
 	-webkit-filter: grayscale(100%);
@@ -128,6 +134,9 @@ figure:hover+span {
 .img-hover figure:hover img {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
+}
+.swiper-slide::after{
+  transition: all 0.5s ease-in;
 }
 @media only screen and (min-width: 769px) {
   .swiper-slide:first-child {
