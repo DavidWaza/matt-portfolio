@@ -60,7 +60,7 @@ const PortfolioCarousel = () => {
         <SwiperSlide>
           {(
             <div className="bg-[black]">
-              <div className="p-10">
+              <div className="py-10">
                 <p className="text-[#939393] mt-3 font-[700] text-[50px]">
                   Hello,
                 </p>
@@ -82,7 +82,7 @@ const PortfolioCarousel = () => {
               </div>
             </div>
           ) || (
-            <SkeletonTheme baseColor="#202020" highlightColor="#444">
+            <SkeletonTheme  baseColor="#202020" highlightColor="#444">
               <Skeleton count={20} />
             </SkeletonTheme>
           )}
