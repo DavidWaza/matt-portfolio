@@ -45,7 +45,7 @@ const PortfolioCarousel = () => {
             slidesPerGroup: 3,
           },
         }}
-        scrollbar={true}
+        scrollbar={false}
         navigation={true}
         pagination={{
           clickable: true,
@@ -66,7 +66,7 @@ const PortfolioCarousel = () => {
                 </p>
                 <p className=" text-[#939393] font-[300] text-[30px]">
                   Im{" "}
-                  <span className="text-[burlywood] poppins">
+                  <span className="text-[burlywood] poppins text-[3rem]">
                     {" "}
                     Damilare Kolawole
                   </span>
