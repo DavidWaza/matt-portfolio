@@ -73,7 +73,7 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
                 <div className="text-[#D0D3D4] pt-24 justify-center md:justify-start tracking-wider flex  items-center">
-                  <Link href="/" className="animate-pulse">
+                  <Link href="#profile" className="animate-pulse">
                     View Profile
                   </Link>
                   <img
