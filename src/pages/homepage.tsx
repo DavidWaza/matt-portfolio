@@ -73,7 +73,9 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
                 <div className="text-[#D0D3D4] pt-24 justify-center md:justify-start tracking-wider flex  items-center">
-                  <Link href="/" className="animate-pulse">View Profile</Link>
+                  <Link href="/" className="animate-pulse">
+                    View Profile
+                  </Link>
                   <img
                     src="/assets/right-arrow.png"
                     className="ml-3 cursor-pointer animate-pulse"
@@ -81,8 +83,21 @@ const HomePage: React.FC = () => {
                   />
                   <PrimaryButton
                     text="Download CV"
-                    className="ml-[2rem] border-2 p-3 px-10 bg-[burlywood] text-black border-[burlywood] font-bold"
+                    className="ml-[2rem] border-2 p-3 px-10 bg-[burlywood] text-black border-[burlywood] font-bold mobile-btn hidden"
                   />
+                  <a
+                    aria-label="Thanks"
+                    className="h-button centered"
+                    data-text="Download cv"
+                    href="#"
+                  >
+                    <span>T</span>
+                    <span>h</span>
+                    <span>a</span>
+                    <span>n</span>
+                    <span>k</span>
+                    <span>s</span>
+                  </a>
                 </div>
               </div>
             </Grid>

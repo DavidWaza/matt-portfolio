@@ -1,12 +1,10 @@
 import React, { Suspense, useRef, useState, useEffect } from "react";
-import NavAppBar from "@/components/Navbar";
 import PortfolioCarousel from "@/components/Carousel";
 import Loading from "@/components/loading";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import HomePage from "./homepage";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import ProfilePage from "./profilepage";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   const [isVisible, setVisible] = useState(true);
@@ -31,7 +29,6 @@ export default function Home() {
       <main>
         <ErrorBoundary>
           <div>
-            <NavAppBar />
             <HomePage />
             {/* <PortfolioCarousel /> */}
 
@@ -43,7 +40,6 @@ export default function Home() {
             </div>
           </div>
         </ErrorBoundary>
-        <Footer />
       </main>
     </>
   );
