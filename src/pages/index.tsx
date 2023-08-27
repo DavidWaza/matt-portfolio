@@ -6,6 +6,7 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import HomePage from "./homepage";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import ProfilePage from "./profilepage";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -21,6 +22,7 @@ export default function Home() {
             <ProfilePage />
           </div>
         </ErrorBoundary>
+        <Footer />
       </main>
     </>
   );
