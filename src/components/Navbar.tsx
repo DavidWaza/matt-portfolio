@@ -12,7 +12,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 
 export default function NavAppBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, height: '10vh'}}>
       <AppBar
         position="static"
         sx={{ backgroundColor: "transparent", marginTop: 3 }}

@@ -31,10 +31,10 @@ export function ErrorBoundary({ children }: PropsWithChildren<ErrorBoundaryProps
 
   if (error) {
     return (
-      <div>
+      <>
         <h1>Something went wrong.</h1>
         <button onClick={resetError}>Retry</button>
-      </div>
+      </>
     );
   }
 

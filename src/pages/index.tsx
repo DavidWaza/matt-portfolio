@@ -1,19 +1,27 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useRef } from "react";
 import NavAppBar from "@/components/Navbar";
 import PortfolioCarousel from "@/components/Carousel";
 import Loading from "@/components/loading";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
-
+import HomePage from "./homepage";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import ProfilePage from "./profilepage";
 
 export default function Home() {
+  const containerRef = useRef(null);
+
   return (
-    <main>
-      <ErrorBoundary>
-        <Suspense fallback={<Loading />}>
-          <NavAppBar />
-          <PortfolioCarousel />
-        </Suspense>
-      </ErrorBoundary>
-    </main>
+    <>
+      <main>
+        <ErrorBoundary>
+          <div>
+            <NavAppBar />
+            <HomePage />
+            {/* <PortfolioCarousel /> */}
+            <ProfilePage />
+          </div>
+        </ErrorBoundary>
+      </main>
+    </>
   );
 }
