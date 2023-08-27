@@ -4,17 +4,17 @@ import "react-loading-skeleton/dist/skeleton.css";
 import Tilt from "react-parallax-tilt";
 import localFont from "next/font/local";
 
-interface CardListItemProps {
-  profession: Profile[];
-}
+// interface CardListItemProps {
+//   profession: Profile[];
+// }
 
 const myFonts = localFont({ src: "../../../public/fonts/Hannari-Regular.ttf" });
 
-const CardListItem: React.FC<CardListItemProps> = ({ profession }) => {
+const CardListItem = ({ profession }: {profession:string | number}) => {
   const [scale, setScale] = useState(1.15);
   return (
     <>
-      {profession.map((profile) => (
+      {profession.map((profile:any) => (
         <div className="img-container " key={profile.id}>
           <div className="img-hover">
             <Tilt
