@@ -72,11 +72,11 @@ const HomePage: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className="text-[#D0D3D4] pt-24 justify-center md:justify-start tracking-wider flex animate-pulse items-center">
-                  <Link href="/">View Profile</Link>
+                <div className="text-[#D0D3D4] pt-24 justify-center md:justify-start tracking-wider flex  items-center">
+                  <Link href="/" className="animate-pulse">View Profile</Link>
                   <img
                     src="/assets/right-arrow.png"
-                    className="ml-3 cursor-pointer"
+                    className="ml-3 cursor-pointer animate-pulse"
                     alt="Right Arrow"
                   />
                   <PrimaryButton
