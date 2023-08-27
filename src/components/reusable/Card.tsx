@@ -33,7 +33,7 @@ export const profession: Profile[] = [
   {
     id: 1,
     img: "/assets/frontend.jpg",
-    title: "software engineering",
+    title: "website development",
     class: "class-white",
   },
 ];
