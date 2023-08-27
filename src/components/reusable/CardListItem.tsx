@@ -10,7 +10,7 @@ import localFont from "next/font/local";
 
 const myFonts = localFont({ src: "../../../public/fonts/Hannari-Regular.ttf" });
 
-const CardListItem = ({ profession }: {profession:string | number}) => {
+const CardListItem = ({ profession }: {profession:any}) => {
   const [scale, setScale] = useState(1.15);
   return (
     <>
