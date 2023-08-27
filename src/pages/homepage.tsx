@@ -7,6 +7,7 @@ import Link from "next/link";
 import { gsap } from "gsap";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import Typewriter from "typewriter-effect";
+import PrimaryButton from "@/components/reusable/Button";
 
 const myFonts = localFont({ src: "../../public/fonts/Hannari-Regular.ttf" });
 
@@ -71,13 +72,16 @@ const HomePage: React.FC = () => {
                     />
                   </div>
                 </div>
-
-                <div className="text-[#D0D3D4] pt-24 justify-center md:justify-start tracking-wider flex animate-pulse">
+                <div className="text-[#D0D3D4] pt-24 justify-center md:justify-start tracking-wider flex animate-pulse items-center">
                   <Link href="/">View Profile</Link>
                   <img
                     src="/assets/right-arrow.png"
-                    className="ml-3 cursor-pointer "
+                    className="ml-3 cursor-pointer"
                     alt="Right Arrow"
+                  />
+                  <PrimaryButton
+                    text="Download CV"
+                    className="ml-[2rem] border-2 p-3 px-10 bg-[burlywood] text-black border-[burlywood] font-bold"
                   />
                 </div>
               </div>
