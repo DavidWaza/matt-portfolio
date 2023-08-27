@@ -7,8 +7,8 @@ import Header from "@/components/reusable/BigHeader";
 
 const CardList: React.FC = () => {
   return (
-    <div id="profile">
-      <Container>
+    <Container>
+      <div id="profile">
         <Header
           header="Profile"
           className="mt-20 poppins text-[2.5rem] tracking-wider text-[burlywood]"
@@ -24,8 +24,8 @@ const CardList: React.FC = () => {
             })}
           </Grid>
         </Box>
-      </Container>
-    </div>
+      </div>
+    </Container>
   );
 };
 export default CardList;
