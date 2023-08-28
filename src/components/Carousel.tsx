@@ -59,36 +59,6 @@ const PortfolioCarousel = () => {
       >
         <SwiperSlide>
           {(
-            <div className="bg-[black]">
-              <div className="py-10">
-                <p className="text-[#939393] mt-3 font-[700] text-[50px]">
-                  Hello,
-                </p>
-                <p className=" text-[#939393] font-[300] text-[30px]">
-                  Im{" "}
-                  <span className="text-[burlywood] poppins text-[3rem]">
-                    {" "}
-                    Damilare Kolawole
-                  </span>
-                </p>
-                <p
-                  className="text-[#939393] mt-3 w-[100%] leading-7 text-[20px] poppins"
-                  style={myFonts.style}
-                >
-                  I am a serial Entrepreneur, Photographer, event planner. i
-                  provide high quality services. welcome to my portfolio. This
-                  would be the most entertaining site i do have. Thanks to Waza
-                </p>
-              </div>
-            </div>
-          ) || (
-            <SkeletonTheme  baseColor="#202020" highlightColor="#444">
-              <Skeleton count={20} />
-            </SkeletonTheme>
-          )}
-        </SwiperSlide>
-        <SwiperSlide>
-          {(
             <div className="img-container">
               <div className="img-hover">
                 <figure>

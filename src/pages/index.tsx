@@ -5,6 +5,9 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import HomePage from "./homepage";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import ProfilePage from "./profilepage";
+import Testimonial from "@/components/MarqueeTestimonial";
+import Marquee from "react-fast-marquee";
+import { TestimonialWords } from "@/components/reusable/Card";
 
 export default function Home() {
   const [isVisible, setVisible] = useState(true);
@@ -30,14 +33,25 @@ export default function Home() {
         <ErrorBoundary>
           <div>
             <HomePage />
-            {/* <PortfolioCarousel /> */}
+            <div className="mobile-view">
 
+            <PortfolioCarousel />
+            </div>
             <div
               ref={domRef}
-              className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+              className={`desktop-view fade-in-section ${isVisible ? "is-visible" : ""}`}
             >
               <ProfilePage />
             </div>
+            <Marquee>
+              {TestimonialWords.map(({ id, name, words }) => {
+                return (
+                  <div key={id}>
+                    <Testimonial name={name} words={words} />
+                  </div>
+                );
+              })}
+            </Marquee>
           </div>
         </ErrorBoundary>
       </main>
