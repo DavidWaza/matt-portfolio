@@ -8,6 +8,8 @@ import ProfilePage from "./profilepage";
 import Testimonial from "@/components/MarqueeTestimonial";
 import Marquee from "react-fast-marquee";
 import { TestimonialWords } from "@/components/reusable/Card";
+import { Grid, Box, Container } from "@mui/material";
+import SwiperTestimonial from "@/components/SwiperTestimonial";
 
 export default function Home() {
   const [isVisible, setVisible] = useState(true);
@@ -34,24 +36,32 @@ export default function Home() {
           <div>
             <HomePage />
             <div className="mobile-view">
-
-            <PortfolioCarousel />
+              <PortfolioCarousel />
             </div>
             <div
               ref={domRef}
-              className={`desktop-view fade-in-section ${isVisible ? "is-visible" : ""}`}
+              className={`desktop-view fade-in-section ${
+                isVisible ? "is-visible" : ""
+              }`}
             >
               <ProfilePage />
             </div>
-            <Marquee>
-              {TestimonialWords.map(({ id, name, words }) => {
-                return (
-                  <div key={id}>
-                    <Testimonial name={name} words={words} />
-                  </div>
-                );
-              })}
-            </Marquee>
+            <div className="mobile-view">
+              <Marquee>
+                {TestimonialWords.map(({ id, name, words }) => {
+                  return (
+                    <div key={id}>
+                      <Testimonial name={name} words={words} />
+                    </div>
+                  );
+                })}
+              </Marquee>
+            </div>
+            <div className="desktop-view">
+              <Container>
+                <SwiperTestimonial />
+              </Container>
+            </div>
           </div>
         </ErrorBoundary>
       </main>

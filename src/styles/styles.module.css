@@ -34,10 +34,10 @@
   background-size: 200px;
 }
 
-.icon svg {
-  fill: white;
+.icon>img{
+  max-width: 60%;
+  max-height: 60%;
 }
-
 .card .title {
   width: 100%;
   margin: 0;
