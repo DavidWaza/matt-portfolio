@@ -116,7 +116,7 @@ const PortfolioCarousel = () => {
                     <div
                       data-scroll
                       data-scroll-speed="0.3"
-                      className="img-text poppins text-white"
+                      className="img-text poppins text-[#0D341D]"
                     >
                       Diamonds
                     </div>
@@ -168,7 +168,7 @@ const PortfolioCarousel = () => {
                     <div
                       data-scroll
                       data-scroll-speed="0.3"
-                      className="img-text poppins text-[burlywood]"
+                      className="img-text poppins text-[coffee]"
                     >
                       E-commerce
                     </div>
@@ -194,7 +194,7 @@ const PortfolioCarousel = () => {
                     <div
                       data-scroll
                       data-scroll-speed="0.3"
-                      className="img-text poppins text-[burlywood] text-[#F7F9F9]"
+                      className="img-text poppins text-[#FFFFFF]"
                     >
                       website Development
                     </div>
