@@ -26,7 +26,7 @@ export default function NavAppBar() {
             <InstagramIcon
               sx={{
                 fontSize: "18px",
-                marginLeft: 3,
+                marginLeft: 1.5,
                 color: "burlywood",
                 cursor: "pointer",
               }}
@@ -34,7 +34,7 @@ export default function NavAppBar() {
             <TwitterIcon
               sx={{
                 fontSize: "18px",
-                marginLeft: 3,
+                marginLeft: 1.5,
                 color: "burlywood",
                 cursor: "pointer",
               }}
