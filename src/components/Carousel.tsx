@@ -31,7 +31,8 @@ const PortfolioCarousel = () => {
 
   return (
     <>
-      <Swiper
+    <div id='profile'>
+    <Swiper
         slidesPerView={1}
         centeredSlides={false}
         slidesPerGroupSkip={1}
@@ -148,6 +149,8 @@ const PortfolioCarousel = () => {
           ) || <Skeleton />}
         </SwiperSlide>
       </Swiper>
+    </div>
+     
     </>
   );
 };
