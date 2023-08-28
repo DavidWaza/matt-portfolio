@@ -10,6 +10,8 @@ import "@/styles/styles.module.css";
 import "swiper/css";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import Image from "next/image";
+import Header from "./reusable/BigHeader";
 
 import {
   Autoplay,
@@ -17,6 +19,7 @@ import {
   Scrollbar,
   Navigation,
   Pagination,
+  Mousewheel
 } from "swiper/modules";
 
 const myFonts = localFont({ src: "../../public/fonts/Hannari-Regular.ttf" });
@@ -32,20 +35,25 @@ const PortfolioCarousel = () => {
   return (
     <>
     <div id='profile'>
+    <Header
+          header="Profile"
+          className="m-10 text-center poppins text-[2rem] tracking-widest text-[burlywood]"
+          style={myFonts.style}
+        />
     <Swiper
-        slidesPerView={1}
+    cssMode={true}
         centeredSlides={false}
-        slidesPerGroupSkip={1}
-        grabCursor={true}
-        keyboard={{
-          enabled: true,
-        }}
-        breakpoints={{
-          769: {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-          },
-        }}
+        spaceBetween={30}
+        modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay, Scrollbar]}
+        // keyboard={{
+        //   enabled: true,
+        // }}
+        // breakpoints={{
+        //   769: {
+        //     slidesPerView: 3,
+        //     slidesPerGroup: 3,
+        //   },
+        // }}
         scrollbar={false}
         navigation={true}
         pagination={{
@@ -53,9 +61,8 @@ const PortfolioCarousel = () => {
         }}
         autoplay={{
           delay: 5500,
-          disableOnInteraction: false,
+          // disableOnInteraction: false,
         }}
-        modules={[Autoplay, Keyboard, Scrollbar, Navigation, Pagination]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -63,7 +70,7 @@ const PortfolioCarousel = () => {
             <div className="img-container">
               <div className="img-hover">
                 <figure>
-                  <img src="/assets/matts.jpg" />
+                  <Image alt='pic1' src="/assets/matts.jpg" width={400} height={400} loading='lazy'/>
                 </figure>
                 <div
                   data-scroll
@@ -81,7 +88,7 @@ const PortfolioCarousel = () => {
             <div className="img-container">
               <div className="img-hover">
                 <figure>
-                  <img src="/assets/diamond-ring.jpg" />
+                  <Image alt='pic2' src="/assets/diamond-ring.jpg" width={400} height={400} loading='lazy'/>
                 </figure>
                 <div
                   data-scroll
@@ -99,7 +106,7 @@ const PortfolioCarousel = () => {
             <div className="img-container">
               <div className="img-hover">
                 <figure>
-                  <img src="/assets/gemstone.jpg" />
+                  <Image alt='pic3' src="/assets/gemstone.jpg" width={400} height={400} loading='lazy' />
                 </figure>
                 <div
                   data-scroll
@@ -117,7 +124,7 @@ const PortfolioCarousel = () => {
             <div className="img-container">
               <div className="img-hover">
                 <figure>
-                  <img src="/assets/e-commerce.jpg" />
+                  <Image alt='pic4' src="/assets/e-commerce.jpg" width={400} height={400} loading='lazy' />
                 </figure>
                 <div
                   data-scroll
@@ -135,7 +142,7 @@ const PortfolioCarousel = () => {
             <div className="img-container">
               <div className="img-hover">
                 <figure>
-                  <img src="/assets/frontend.jpg" />
+                  <Image alt='pic5' src="/assets/frontend.jpg" width={400} height={400} loading='lazy' />
                 </figure>
                 <div
                   data-scroll

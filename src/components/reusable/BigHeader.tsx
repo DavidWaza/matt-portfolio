@@ -1,6 +1,7 @@
 interface HeaderProps {
   header: string;
   className: string;
+  style?:any
 }
 const Header: React.FC<HeaderProps> = (props) => {
   return (
