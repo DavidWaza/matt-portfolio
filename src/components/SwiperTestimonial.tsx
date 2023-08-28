@@ -37,7 +37,7 @@ const SwiperTestimonial = () => {
       <div>
         <Header
           header="Testimonials"
-          className="m-1 text-[2rem] tracking-widest text-[burlywood]"
+          className="m-1 text-center md:text-left text-[2rem] tracking-widest text-[burlywood]"
           style={myFonts.style}
         />
         <Swiper

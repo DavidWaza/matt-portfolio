@@ -46,7 +46,7 @@ export default function Home() {
             >
               <ProfilePage />
             </div>
-            {/* <div className="mobile-view">
+            <div className="mobile-view">
               <Marquee>
                 {TestimonialWords.map(({ id, name, words }) => {
                   return (
@@ -56,8 +56,8 @@ export default function Home() {
                   );
                 })}
               </Marquee>
-            </div> */}
-            <div className="">
+            </div>
+            <div className="desktop-view">
               <Container>
                 <SwiperTestimonial />
               </Container>
