@@ -82,8 +82,8 @@ const PortfolioCarousel = () => {
                       <Image
                         alt="pic1"
                         src="/assets/matts.jpg"
-                        width={400}
-                        height={400}
+                        width={600}
+                        height={600}
                         loading="lazy"
                       />
                     </figure>
@@ -108,8 +108,8 @@ const PortfolioCarousel = () => {
                       <Image
                         alt="pic2"
                         src="/assets/diamond-ring.jpg"
-                        width={400}
-                        height={400}
+                        width={500}
+                        height={500}
                         loading="lazy"
                       />
                     </figure>
@@ -134,8 +134,8 @@ const PortfolioCarousel = () => {
                       <Image
                         alt="pic3"
                         src="/assets/gemstone.jpg"
-                        width={400}
-                        height={400}
+                        width={500}
+                        height={500}
                         loading="lazy"
                       />
                     </figure>
@@ -160,8 +160,8 @@ const PortfolioCarousel = () => {
                       <Image
                         alt="pic4"
                         src="/assets/e-commerce.jpg"
-                        width={400}
-                        height={400}
+                        width={500}
+                        height={500}
                         loading="lazy"
                       />
                     </figure>
@@ -186,8 +186,8 @@ const PortfolioCarousel = () => {
                       <Image
                         alt="pic5"
                         src="/assets/frontend.jpg"
-                        width={400}
-                        height={400}
+                        width={500}
+                        height={500}
                         loading="lazy"
                       />
                     </figure>
