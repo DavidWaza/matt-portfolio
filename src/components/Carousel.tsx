@@ -21,6 +21,7 @@ import {
   Pagination,
   Mousewheel,
 } from "swiper/modules";
+import Link from "next/link";
 
 const myFonts = localFont({ src: "../../public/fonts/Hannari-Regular.ttf" });
 
@@ -74,122 +75,132 @@ const PortfolioCarousel = () => {
         >
           <SwiperSlide>
             {(
-              <div className="img-container">
-                <div className="img-hover">
-                  <figure>
-                    <Image
-                      alt="pic1"
-                      src="/assets/matts.jpg"
-                      width={400}
-                      height={400}
-                      loading="lazy"
-                    />
-                  </figure>
-                  <div
-                    data-scroll
-                    data-scroll-speed="0.3"
-                    className="img-text poppins text-[burlywood]"
-                  >
-                    <p>{`Photography`}</p>
+              <Link href="/photography">
+                <div className="img-container">
+                  <div className="img-hover">
+                    <figure>
+                      <Image
+                        alt="pic1"
+                        src="/assets/matts.jpg"
+                        width={400}
+                        height={400}
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div
+                      data-scroll
+                      data-scroll-speed="0.3"
+                      className="img-text poppins text-[burlywood]"
+                    >
+                      <p>{`Photography`}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ) || <Skeleton />}
           </SwiperSlide>
           <SwiperSlide>
             {(
-              <div className="img-container">
-                <div className="img-hover">
-                  <figure>
-                    <Image
-                      alt="pic2"
-                      src="/assets/diamond-ring.jpg"
-                      width={400}
-                      height={400}
-                      loading="lazy"
-                    />
-                  </figure>
-                  <div
-                    data-scroll
-                    data-scroll-speed="0.3"
-                    className="img-text poppins text-white"
-                  >
-                    Diamonds
+              <Link href="/diamonds">
+                <div className="img-container">
+                  <div className="img-hover">
+                    <figure>
+                      <Image
+                        alt="pic2"
+                        src="/assets/diamond-ring.jpg"
+                        width={400}
+                        height={400}
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div
+                      data-scroll
+                      data-scroll-speed="0.3"
+                      className="img-text poppins text-white"
+                    >
+                      Diamonds
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ) || <Skeleton />}
           </SwiperSlide>
           <SwiperSlide>
             {(
-              <div className="img-container">
-                <div className="img-hover">
-                  <figure>
-                    <Image
-                      alt="pic3"
-                      src="/assets/gemstone.jpg"
-                      width={400}
-                      height={400}
-                      loading="lazy"
-                    />
-                  </figure>
-                  <div
-                    data-scroll
-                    data-scroll-speed="0.3"
-                    className="img-text poppins text-[#4a2c2a]"
-                  >
-                    Gem Stones
+              <Link href="/precious-stones">
+                <div className="img-container">
+                  <div className="img-hover">
+                    <figure>
+                      <Image
+                        alt="pic3"
+                        src="/assets/gemstone.jpg"
+                        width={400}
+                        height={400}
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div
+                      data-scroll
+                      data-scroll-speed="0.3"
+                      className="img-text poppins text-[#4a2c2a]"
+                    >
+                      Precious Stones
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ) || <Skeleton />}
           </SwiperSlide>
           <SwiperSlide>
             {(
-              <div className="img-container">
-                <div className="img-hover">
-                  <figure>
-                    <Image
-                      alt="pic4"
-                      src="/assets/e-commerce.jpg"
-                      width={400}
-                      height={400}
-                      loading="lazy"
-                    />
-                  </figure>
-                  <div
-                    data-scroll
-                    data-scroll-speed="0.3"
-                    className="img-text poppins text-[burlywood]"
-                  >
-                    E-commerce
+              <Link href="/e-commerce">
+                <div className="img-container">
+                  <div className="img-hover">
+                    <figure>
+                      <Image
+                        alt="pic4"
+                        src="/assets/e-commerce.jpg"
+                        width={400}
+                        height={400}
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div
+                      data-scroll
+                      data-scroll-speed="0.3"
+                      className="img-text poppins text-[burlywood]"
+                    >
+                      E-commerce
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ) || <Skeleton />}
           </SwiperSlide>
           <SwiperSlide>
             {(
-              <div className="img-container">
-                <div className="img-hover">
-                  <figure>
-                    <Image
-                      alt="pic5"
-                      src="/assets/frontend.jpg"
-                      width={400}
-                      height={400}
-                      loading="lazy"
-                    />
-                  </figure>
-                  <div
-                    data-scroll
-                    data-scroll-speed="0.3"
-                    className="img-text poppins text-[burlywood] text-[#F7F9F9]"
-                  >
-                    Software Engineering
+              <Link href="/web-dev">
+                <div className="img-container">
+                  <div className="img-hover">
+                    <figure>
+                      <Image
+                        alt="pic5"
+                        src="/assets/frontend.jpg"
+                        width={400}
+                        height={400}
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div
+                      data-scroll
+                      data-scroll-speed="0.3"
+                      className="img-text poppins text-[burlywood] text-[#F7F9F9]"
+                    >
+                      website Development
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ) || <Skeleton />}
           </SwiperSlide>
         </Swiper>
