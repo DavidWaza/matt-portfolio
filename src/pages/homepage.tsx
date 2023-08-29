@@ -8,6 +8,7 @@ import { gsap } from "gsap";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import Typewriter from "typewriter-effect";
 import PrimaryButton from "@/components/reusable/Button";
+import Image from "next/image";
 
 
 const HomePage: React.FC = () => {
@@ -66,10 +67,12 @@ const HomePage: React.FC = () => {
                   <Link href="#profile" className="animate-pulse">
                     View Profile
                   </Link>
-                  <img
+                  <Image
                     src="/assets/right-arrow.png"
                     className="ml-3 cursor-pointer animate-pulse"
                     alt="Right Arrow"
+                    width={20}
+                    height={20}
                   />
                   <PrimaryButton
                     text="Download CV"
