@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@200;300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Unbounded:wght@200;300;400;500;600;700;800&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -28,8 +29,9 @@ body {
   background: linear-gradient(to bottom,
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-  font-family: 'Poppins', sans-serif;
   height: 80%;
+  font-family: 'Syne', sans-serif;
+
 }
 
 .mobile-view{
@@ -107,12 +109,12 @@ body {
 }
 
 /* FONTS */
-.delius {
-  font-family: 'Delius Unicase', cursive;
+.syne{
+  font-family: 'Syne', sans-serif;
 }
 
-.poppins {
-  font-family: 'Poppins', sans-serif;
+.unbound {
+  font-family: 'Unbounded', sans-serif;
 }
 
 .burylwood-box {
@@ -152,7 +154,7 @@ figure:hover+span {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.4rem;
-  font-weight: 700;
+  font-weight: 500;
   visibility: visible;
   opacity: 1;
   transition: all 0.5s ease-in;
@@ -180,8 +182,6 @@ figure:hover+span {
 
 }
 
-
-
 .parallax-effect {
   transform-style: preserve-3d;
 }
@@ -207,7 +207,7 @@ a {
 }
 
 .centered {
-  @apply ml-[2rem] border-2 text-black border-[burlywood] font-bold;
+  @apply ml-[2rem] border-2 text-black border-[burlywood] font-medium;
   transform: translate(20%, -10%);
 }
 
@@ -282,6 +282,9 @@ a {
   transition-delay: 0.15s;
 }
 
+
+
+/* MEDIA QUERIES */
 @media only screen and (max-width: 769px) {
 
   .swiper-slide:first-child {

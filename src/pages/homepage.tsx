@@ -9,7 +9,6 @@ import { useLocomotiveScroll } from "react-locomotive-scroll";
 import Typewriter from "typewriter-effect";
 import PrimaryButton from "@/components/reusable/Button";
 
-const myFonts = localFont({ src: "../../public/fonts/Hannari-Regular.ttf" });
 
 const HomePage: React.FC = () => {
   const app = useRef<HTMLDivElement>(null);
@@ -37,25 +36,16 @@ const HomePage: React.FC = () => {
           <Grid container spacing={2}>
             <Grid item md={7} xs={12}>
               <div className="justify-center h-[50rem] -mt-[20%] md:mt-0">
-                <div className="scroll" ref={scroll}>
+                <div>
                   <p
-                    className="leading-3 tracking-wider pt-[5rem] text-center md:text-left text-[#D0D3D4] text-[18px]"
-                    style={myFonts.style}
+                    className={`leading-3 syne tracking-wider pt-[5rem] text-center md:text-left text-[#D0D3D4] text-[18px]`}
                   >
                     Oluwadamilare Kolawole
                   </p>
-                  <p
-                    className="pt-3 text-[#D0D3D4] text-center md:text-left tracking-wider font-[100]"
-                    style={myFonts.style}
-                  >
-                    Serial Entrepreneur
-                  </p>
                 </div>
-
                 <div>
                   <div
-                    className="pt-20 text-[1.5rem] text-center md:text-left md:text-[3.5rem] text-[burlywood] font-bold"
-                    style={myFonts.style}
+                    className={`pt-10 unbound text-[1.5rem] text-center md:text-left md:text-[2.7rem] text-[burlywood] font-bold`}
                   >
                     The Business of Being a{" "}
                     <Typewriter
@@ -72,7 +62,7 @@ const HomePage: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className="text-[#D0D3D4] pt-24 justify-center md:justify-start tracking-wider flex  items-center">
+                <div className="syne text-[#D0D3D4] pt-24 justify-center md:justify-start tracking-wider flex  items-center">
                   <Link href="#profile" className="animate-pulse">
                     View Profile
                   </Link>
@@ -83,11 +73,11 @@ const HomePage: React.FC = () => {
                   />
                   <PrimaryButton
                     text="Download CV"
-                    className="ml-[2rem] border-2 p-3 px-10 bg-[burlywood] text-black border-[burlywood] font-bold mobile-btn hidden"
+                    className="ml-[2rem] border-2 p-3 px-10 bg-[burlywood] border-[burlywood] syne mobile-btn hidden"
                   />
                   <a
                     aria-label="Thanks"
-                    className="h-button centered"
+                    className="h-button centered syne"
                     data-text="Download cv"
                     href="#"
                   >

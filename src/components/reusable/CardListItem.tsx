@@ -6,11 +6,6 @@ import localFont from "next/font/local";
 import Image from "next/image";
 import Link from "next/link";
 
-// interface CardListItemProps {
-//   profession: Profile[];
-// }
-
-const myFonts = localFont({ src: "../../../public/fonts/Hannari-Regular.ttf" });
 
 const CardListItem = ({ profession }: { profession: any }) => {
   const [scale, setScale] = useState(1.15);
@@ -46,8 +41,8 @@ const CardListItem = ({ profession }: { profession: any }) => {
               <div
                 data-scroll
                 data-scroll-speed="0.3"
-                className={`img-text poppins ${profile.class}`}
-                style={myFonts.style}
+                className={`img-text ${profile.class}`}
+                // style={myFonts.style}
               >
                 {profile.title}
               </div>

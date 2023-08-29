@@ -5,7 +5,6 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import localFont from "next/font/local";
 import "@/styles/styles.module.css";
 import "swiper/css";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
@@ -23,7 +22,6 @@ import {
 } from "swiper/modules";
 import Link from "next/link";
 
-const myFonts = localFont({ src: "../../public/fonts/Hannari-Regular.ttf" });
 
 const PortfolioCarousel = () => {
   useEffect(() => {
@@ -38,8 +36,7 @@ const PortfolioCarousel = () => {
       <div id="profile">
         <Header
           header="Profile"
-          className="m-10 text-center poppins text-[2rem] tracking-widest text-[burlywood]"
-          style={myFonts.style}
+          className="m-10 text-center unbound uppercase text-[2rem] tracking-widest text-[burlywood]"
         />
         <Swiper
           cssMode={true}

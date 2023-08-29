@@ -11,9 +11,9 @@ const CardList: React.FC = () => {
       <div id="profile">
         <Header
           header="Profile"
-          className="mt-20 poppins text-[2.5rem] tracking-wider text-[burlywood]"
+          className="mt-10 unbound uppercase text-center md:text-left text-[2rem] tracking-widest text-[burlywood]"
         />
-        <Box sx={{ flexGrow: 1, marginTop: 10 }}>
+        <Box sx={{ flexGrow: 1, marginTop: 7 }}>
           <Grid container spacing={4}>
             {profession.map((profile) => {
               return (

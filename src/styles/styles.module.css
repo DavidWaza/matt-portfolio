@@ -3,10 +3,11 @@
   max-width: 300px;
   min-width: 200px;
   height: 350px;
-  background-color: #292929;
+  border: 1px solid burlywood;
+  background-color: transparent;
   margin: 10px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
-  border: 2px solid rgba(7, 7, 7, 0.12);
+  /* border: 2px solid rgba(7, 7, 7, 0.12); */
   font-size: 16px;
   transition: all 0.3s ease;
   position: relative;
@@ -82,3 +83,79 @@
   fill: url('#gradientColor');
   transition: all 0.3s ease;
 }
+
+/* SOCIAL ICONS */
+.socialCard {
+  display: flex;
+  height: 70px;
+  width: 270px;
+}
+
+.socialCard svg {
+  position: absolute;
+  display: flex;
+  width: 60%;
+  height: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.socialCard .sociallink1,.socialCard .sociallink2,.socialCard .sociallink3,.socialCard .sociallink4 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  color: whitesmoke;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
+  border-radius: 50px;
+}
+
+.socialCard svg {
+  transform: scale(1);
+}
+
+.socialCard .sociallink1:hover {
+  background-color: #1a1e22;
+  animation: bounce_613 0.4s linear;
+}
+
+.socialCard .sociallink2:hover {
+  background-color: #0a66c2;
+  animation: bounce_613 0.4s linear;
+}
+
+.socialCard .sociallink3:hover {
+  background-color: #0059f7;
+  animation: bounce_613 0.4s linear;
+}
+
+.socialCard .sociallink4:hover {
+  background-color: #1d4292;
+  animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+

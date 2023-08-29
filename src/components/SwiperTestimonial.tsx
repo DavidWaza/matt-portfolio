@@ -22,8 +22,6 @@ import {
   Mousewheel,
 } from "swiper/modules";
 
-const myFonts = localFont({ src: "../../public/fonts/Hannari-Regular.ttf" });
-
 const SwiperTestimonial = () => {
   useEffect(() => {
     async () => {
@@ -37,8 +35,7 @@ const SwiperTestimonial = () => {
       <div>
         <Header
           header="Testimonials"
-          className="m-1 text-center md:text-left text-[2rem] tracking-widest text-[burlywood]"
-          style={myFonts.style}
+          className="m-1 unbound uppercase text-center md:text-left text-[2rem] tracking-widest text-[burlywood]"
         />
         <Swiper
           slidesPerView={3}
