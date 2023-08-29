@@ -10,7 +10,6 @@ import Typewriter from "typewriter-effect";
 import PrimaryButton from "@/components/reusable/Button";
 import Image from "next/image";
 
-
 const HomePage: React.FC = () => {
   const app = useRef<HTMLDivElement>(null);
   const tl = useRef<gsap.core.Timeline | null>(null);
@@ -39,48 +38,46 @@ const HomePage: React.FC = () => {
               <div className="justify-center h-[50rem] -mt-[20%] md:mt-0">
                 <div>
                   <p
-                    className={`leading-3 syne tracking-wider pt-[5rem] text-center md:text-left text-[#D0D3D4] text-[18px]`}
+                    className={`leading-3 syne tracking-wider pt-[5rem] text-center md:text-left text-[#D0D3D4] text-[18px] text-index`}
                   >
                     Oluwadamilare Kolawole
                   </p>
                 </div>
-                <div>
-                  <div
-                    className={`pt-10 unbound text-[1.5rem] text-center md:text-left md:text-[2.7rem] text-[burlywood] font-bold`}
-                  >
-                    The Business of Being a{" "}
-                    <Typewriter
-                      options={{
-                        strings: [
-                          "Photographer.",
-                          "Software Developer.",
-                          "Merchandiser.",
-                          "Serial Entreprenuer.",
-                        ],
-                        autoStart: true,
-                        loop: true,
-                      }}
-                    />
-                  </div>
+                <div
+                  className={`pt-10 unbound text-[1.5rem] text-center md:text-left md:text-[2.7rem] text-[burlywood] font-bold text-index`}
+                >
+                  The Business of Being a{" "}
+                  <Typewriter
+                    options={{
+                      strings: [
+                        "Photographer.",
+                        "Software Developer.",
+                        "Merchandiser.",
+                        "Serial Entreprenuer.",
+                      ],
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
                 </div>
-                <div className="syne text-[#D0D3D4] pt-24 justify-center md:justify-start tracking-wider flex  items-center">
+                <div className="syne text-[#D0D3D4] pt-24 justify-center md:justify-start tracking-wider flex  items-center text-index">
                   <Link href="#profile" className="animate-pulse">
                     View Profile
                   </Link>
                   <Image
                     src="/assets/right-arrow.png"
-                    className="ml-3 cursor-pointer animate-pulse"
+                    className="ml-3 cursor-pointer animate-pulse text-index"
                     alt="Right Arrow"
                     width={20}
                     height={20}
                   />
                   <PrimaryButton
                     text="Download CV"
-                    className="ml-[2rem] border-2 p-3 px-10 bg-[burlywood] border-[burlywood] syne mobile-btn hidden"
+                    className="ml-[2rem] border-2 p-3 px-10 bg-[burlywood] border-[burlywood] syne mobile-btn hidden text-index"
                   />
                   <a
                     aria-label="Thanks"
-                    className="h-button centered syne"
+                    className="h-button centered syne text-index"
                     data-text="Download cv"
                     href="#"
                   >
@@ -96,7 +93,7 @@ const HomePage: React.FC = () => {
             </Grid>
             <Grid item md={5} xs={12}>
               <div ref={app}>
-                <div className="lg:border-2 lg:border-solid lg:h-[30rem] lg:border-[burlywood] square "></div>
+                <div className="lg:border-2 lg:border-solid lg:h-[30rem] lg:border-[burlywood] square text-index"></div>
               </div>
             </Grid>
           </Grid>

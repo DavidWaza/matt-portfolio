@@ -34,7 +34,7 @@ body {
 
 }
 
-.mobile-view{
+.mobile-view {
   display: none;
 }
 
@@ -44,9 +44,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   height: 85vh;
-  z-index: 1;
-  
+  z-index: 0;
 }
+
 .home-bg::before {
   content: "";
   position: absolute;
@@ -54,8 +54,14 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for the opacity of the overlay */
-  /* z-index: 0; Ensure the overlay is above the background image */
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: grayscale(100%);
+  z-index: 1;
+}
+
+.text-index {
+  position: relative;
+  z-index: 2;
 }
 
 .fade-in-section {
@@ -101,6 +107,7 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
   color: burlywood;
@@ -121,7 +128,7 @@ body {
 }
 
 /* FONTS */
-.syne{
+.syne {
   font-family: 'Syne', sans-serif;
 }
 
@@ -198,9 +205,10 @@ figure:hover+span {
   transform-style: preserve-3d;
 }
 
-.swiper-slide::after{
+.swiper-slide::after {
   transition: all 0.5s ease-in;
 }
+
 .class-burylwood {
   color: burlywood;
 }
@@ -332,22 +340,26 @@ a {
   .swiper[dir="rtl"] .swiper-slide.swiper-slide-next:nth-child(2) {
     transform: translateX(-55%);
   }
-  .desktop-view{
-    display: none;
-  }
-  .mobile-view{
-    display: block;
-  }
-  .h-button {
-    width: 100px;
-    padding: 10px ;
+
+  .desktop-view {
     display: none;
   }
 
-  .h-button:before{
+  .mobile-view {
+    display: block;
+  }
+
+  .h-button {
+    width: 100px;
+    padding: 10px;
+    display: none;
+  }
+
+  .h-button:before {
     font-size: 10px;
   }
-  .mobile-btn{
+
+  .mobile-btn {
     width: 120px;
     font-size: 12px;
     padding: 10px;
