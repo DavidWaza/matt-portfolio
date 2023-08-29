@@ -39,11 +39,23 @@ body {
 }
 
 .home-bg {
-  background: url('/assets/home-bg-2.jpg');
+  background: url('https://res.cloudinary.com/dgbl43ljm/image/upload/v1693310387/darkbg_wkwmds.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 90vh;
+  height: 85vh;
+  z-index: 1;
+  
+}
+.home-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for the opacity of the overlay */
+  /* z-index: 0; Ensure the overlay is above the background image */
 }
 
 .fade-in-section {
