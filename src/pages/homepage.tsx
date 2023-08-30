@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { Container } from "@mui/material";
@@ -9,11 +9,15 @@ import { useLocomotiveScroll } from "react-locomotive-scroll";
 import Typewriter from "typewriter-effect";
 import PrimaryButton from "@/components/reusable/Button";
 import Image from "next/image";
+import Tilt from "react-parallax-tilt";
 
 const HomePage: React.FC = () => {
   const app = useRef<HTMLDivElement>(null);
   const tl = useRef<gsap.core.Timeline | null>(null);
   const { scroll } = useLocomotiveScroll();
+
+  // const [scale, setScale] = useState(0.15);
+
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -93,7 +97,20 @@ const HomePage: React.FC = () => {
             </Grid>
             <Grid item md={5} xs={12}>
               <div ref={app}>
-                <div className="lg:border-2 lg:border-solid lg:h-[30rem] lg:border-[burlywood] square text-index"></div>
+                <div className="lg:border-2 lg:border-solid lg:h-[29.5rem] lg:border-[burlywood] square text-index">
+                  <Tilt
+                    className="parallax-effect"
+                    // scale={scale}
+                    transitionSpeed={2500}
+                  >
+                    <Image
+                      alt="matt"
+                      src="/assets/mattai2.jpg"
+                      width={500}
+                      height={500}
+                    />
+                  </Tilt>
+                </div>
               </div>
             </Grid>
           </Grid>
