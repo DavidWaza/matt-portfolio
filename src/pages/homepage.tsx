@@ -77,7 +77,7 @@ const HomePage: React.FC = () => {
                   />
                   <PrimaryButton
                     text="Download CV"
-                    className="ml-[2rem] border-2 p-3 px-10 bg-[burlywood] border-[burlywood] syne mobile-btn hidden text-index"
+                    className="ml-[2rem] class-coal font-[500] border-2 p-3 px-10 bg-[burlywood] border-[burlywood] syne mobile-btn hidden text-index"
                   />
                   <a
                     aria-label="Thanks"
@@ -108,6 +108,7 @@ const HomePage: React.FC = () => {
                       src="/assets/mattai2.jpg"
                       width={500}
                       height={500}
+                      className='hidden md:block'
                     />
                   </Tilt>
                 </div>

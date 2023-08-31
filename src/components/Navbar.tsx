@@ -47,7 +47,7 @@ export default function NavAppBar() {
             component="div"
             sx={{ flexGrow: 1, display: "flex", justifyContent: "center" }}
           >
-            <Link href="/">DAMILARE</Link>
+            <Link href="/" className='unbound font-[300] text-[0.73rem] md:text-[1.4rem] md:font-[600]'>OLUWADAMILARE</Link>
           </Typography>
           <IconButton
             size="large"

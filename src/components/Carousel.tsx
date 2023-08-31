@@ -78,7 +78,7 @@ const PortfolioCarousel = () => {
                     <figure>
                       <Image
                         alt="pic1"
-                        src="/assets/matts.jpg"
+                        src="https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312966/matts_c3t2y8.jpg"
                         width={600}
                         height={600}
                         loading="lazy"
@@ -104,7 +104,7 @@ const PortfolioCarousel = () => {
                     <figure>
                       <Image
                         alt="pic2"
-                        src="/assets/diamond-ring.jpg"
+                        src="https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312962/diamond-ring_xdjpzy.jpg"
                         width={500}
                         height={500}
                         loading="lazy"
@@ -130,7 +130,7 @@ const PortfolioCarousel = () => {
                     <figure>
                       <Image
                         alt="pic3"
-                        src="/assets/gemstone.jpg"
+                        src="https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312965/gemstone_aedeqn.jpg"
                         width={500}
                         height={500}
                         loading="lazy"
@@ -156,7 +156,7 @@ const PortfolioCarousel = () => {
                     <figure>
                       <Image
                         alt="pic4"
-                        src="/assets/e-commerce.jpg"
+                        src="https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312965/e-commerce_cxlm0n.jpg"
                         width={500}
                         height={500}
                         loading="lazy"
@@ -182,7 +182,7 @@ const PortfolioCarousel = () => {
                     <figure>
                       <Image
                         alt="pic5"
-                        src="/assets/frontend.jpg"
+                        src="https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312968/frontend_gvubtj.jpg"
                         width={500}
                         height={500}
                         loading="lazy"

@@ -10,7 +10,7 @@ import Link from "next/link";
 const CardListItem = ({ profession }: { profession: any }) => {
   const [scale, setScale] = useState(1.15);
   return (
-    <>
+    <div>
       {profession.map((profile: any) => (
         <div className="img-container " key={profile.id}>
           <div className="img-hover">
@@ -50,7 +50,7 @@ const CardListItem = ({ profession }: { profession: any }) => {
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 export default CardListItem;

@@ -10,7 +10,7 @@ import "@/styles/styles.module.css";
 import "swiper/css";
 import "react-loading-skeleton/dist/skeleton.css";
 import Header from "./reusable/BigHeader";
-import { TestimonialWords } from "@/components/reusable/Card";
+import { TestimonialWords } from "@/components/reusable/data";
 import Testimonial from "@/components/MarqueeTestimonial";
 
 import {

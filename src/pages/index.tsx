@@ -1,13 +1,12 @@
 import React, { Suspense, useRef, useState, useEffect } from "react";
 import PortfolioCarousel from "@/components/Carousel";
 import Loading from "@/components/loading";
-import { ErrorBoundary } from "@/components/ErrorBoundary";
 import HomePage from "./homepage";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import ProfilePage from "./profilepage";
 import Testimonial from "@/components/MarqueeTestimonial";
 import Marquee from "react-fast-marquee";
-import { TestimonialWords } from "@/components/reusable/Card";
+import { TestimonialWords } from "@/components/reusable/data";
 import { Grid, Box, Container } from "@mui/material";
 import SwiperTestimonial from "@/components/SwiperTestimonial";
 
@@ -32,38 +31,34 @@ export default function Home() {
   return (
     <>
       <main>
-        <ErrorBoundary>
-          <div>
-            <HomePage />
-            <div className="mobile-view">
-              <PortfolioCarousel />
-            </div>
-            <div
-              ref={domRef}
-              className={`desktop-view fade-in-section ${
-                isVisible ? "is-visible" : ""
-              }`}
-            >
-              <ProfilePage />
-            </div>
-            <div className="mobile-view">
-              <Marquee>
-                {TestimonialWords.map(({ id, name, words }) => {
-                  return (
-                    <div key={id}>
-                      <Testimonial name={name} words={words} />
-                    </div>
-                  );
-                })}
-              </Marquee>
-            </div>
-            <div className="desktop-view">
-              <Container>
-                <SwiperTestimonial />
-              </Container>
-            </div>
-          </div>
-        </ErrorBoundary>
+        <HomePage />
+        <div className="mobile-view">
+          <PortfolioCarousel />
+        </div>
+        <div
+          ref={domRef}
+          className={`desktop-view fade-in-section ${
+            isVisible ? "is-visible" : ""
+          }`}
+        >
+          <ProfilePage />
+        </div>
+        <div className="mobile-view">
+          <Marquee>
+            {TestimonialWords.map(({ id, name, words }) => {
+              return (
+                <div key={id}>
+                  <Testimonial name={name} words={words} />
+                </div>
+              );
+            })}
+          </Marquee>
+        </div>
+        <div className="desktop-view">
+          <Container>
+            <SwiperTestimonial />
+          </Container>
+        </div>
       </main>
     </>
   );
