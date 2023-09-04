@@ -429,4 +429,8 @@ label {
   .desktop-view{
     display: none;
   }
+  .img-text{
+    right: 30px;
+    text-align: center;
+  }
 }
