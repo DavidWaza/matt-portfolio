@@ -108,7 +108,7 @@ const HomePage: React.FC = () => {
                       src="/assets/mattai2.jpg"
                       width={500}
                       height={500}
-                      className='desktop-view'
+                      className='desktop-view tablet-view'
                     />
                   </Tilt>
                 </div>
