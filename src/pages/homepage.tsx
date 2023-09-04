@@ -97,7 +97,7 @@ const HomePage: React.FC = () => {
             </Grid>
             <Grid item md={5} xs={12}>
               <div ref={app}>
-                <div className="lg:border-2 lg:border-solid lg:h-[29.5rem] lg:border-[burlywood] square text-index">
+                <div className="lg:border-2 lg:border-solid lg:h-[29.5rem] lg:border-[burlywood] square text-index desktop-view">
                   <Tilt
                     className="parallax-effect"
                     // scale={scale}
@@ -108,7 +108,7 @@ const HomePage: React.FC = () => {
                       src="/assets/mattai2.jpg"
                       width={500}
                       height={500}
-                      className='hidden md:block'
+                      className='desktop-view'
                     />
                   </Tilt>
                 </div>

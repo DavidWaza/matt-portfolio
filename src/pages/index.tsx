@@ -1,14 +1,22 @@
 import React, { Suspense, useRef, useState, useEffect } from "react";
 import PortfolioCarousel from "@/components/Carousel";
-import Loading from "@/components/loading";
 import HomePage from "./homepage";
-import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import ProfilePage from "./profilepage";
 import Testimonial from "@/components/MarqueeTestimonial";
 import Marquee from "react-fast-marquee";
 import { TestimonialWords } from "@/components/reusable/data";
 import { Grid, Box, Container } from "@mui/material";
 import SwiperTestimonial from "@/components/SwiperTestimonial";
+import ContactForms from "@/components/Forms";
+import Header from "@/components/reusable/BigHeader";
+import ContactInfo from "@/components/ContactInfo";
+
+const initialValues = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  message: "",
+};
 
 export default function Home() {
   const [isVisible, setVisible] = useState(true);
@@ -32,33 +40,58 @@ export default function Home() {
     <>
       <main>
         <HomePage />
-        <div className="mobile-view">
-          <PortfolioCarousel />
-        </div>
-        <div
-          ref={domRef}
-          className={`desktop-view fade-in-section ${
-            isVisible ? "is-visible" : ""
-          }`}
-        >
-          <ProfilePage />
-        </div>
-        <div className="mobile-view">
-          <Marquee>
-            {TestimonialWords.map(({ id, name, words }) => {
-              return (
-                <div key={id}>
-                  <Testimonial name={name} words={words} />
-                </div>
-              );
-            })}
-          </Marquee>
-        </div>
-        <div className="desktop-view">
-          <Container>
+        <Container>
+          <div className="mobile-view">
+            <PortfolioCarousel />
+          </div>
+          <div
+            ref={domRef}
+            className={`desktop-view fade-in-section ${
+              isVisible ? "is-visible" : ""
+            }`}
+          >
+            <ProfilePage />
+          </div>
+          <div className="mobile-view">
+            <Marquee>
+              {TestimonialWords.map(({ id, name, words }) => {
+                return (
+                  <div key={id}>
+                    <Testimonial name={name} words={words} />
+                  </div>
+                );
+              })}
+            </Marquee>
+          </div>
+          <div className="desktop-view">
             <SwiperTestimonial />
-          </Container>
-        </div>
+          </div>
+          <div className="px-3 md:px-0">
+            <Box sx={{ flexGrow: 1 }}>
+            <Header
+              header="get in touch"
+              className=" text-[2.2rem] md:text-[3rem] unbound mt-11 uppercase"
+            />
+            <Header
+              header="Let's get down to Business!"
+              className="text-[1.4rem] md:text-[2.2rem] unbound"
+            />
+              <Grid
+                spacing={0}
+                justifyContent="center"
+                alignItems="center"
+                container
+              >
+                <Grid xs={12} md={6} lg={6}>
+                  <ContactInfo />
+                </Grid>
+                <Grid xs={12} md={6} lg={6}>
+                  {/* <ContactForms initialValues={initialValues} /> */}
+                </Grid>
+              </Grid>
+            </Box>
+          </div>
+        </Container>
       </main>
     </>
   );
