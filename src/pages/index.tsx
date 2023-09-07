@@ -10,18 +10,17 @@ import SwiperTestimonial from "@/components/SwiperTestimonial";
 import ContactForms from "@/components/Forms";
 import Header from "@/components/reusable/BigHeader";
 import ContactInfo from "@/components/ContactInfo";
+import { motion, useScroll, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-const initialValues = {
-  firstName: "",
-  lastName: "",
-  email: "",
-  message: "",
-};
 
 export default function Home() {
   const [isVisible, setVisible] = useState(true);
-  // const containerRef = useRef(null);
   const domRef = useRef(null);
+
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+  });
 
   useEffect(() => {
     const currentRef = domRef.current;
@@ -44,13 +43,17 @@ export default function Home() {
           <div className="mobile-view">
             <PortfolioCarousel />
           </div>
-          <div
-            ref={domRef}
-            className={`desktop-view fade-in-section ${
-              isVisible ? "is-visible" : ""
-            }`}
-          >
-            <ProfilePage />
+          <div ref={ref}>
+            <motion.div
+              ref={domRef}
+              className={`desktop-view fade-in-section ${
+                inView ? "is-visible" : ""
+              }`}
+              initial={{ opacity: 0 }}
+              animate={inView ? { opacity: 1 } : {}}
+            >
+              <ProfilePage />
+            </motion.div>
           </div>
           <div className="mobile-view">
             <Marquee>
@@ -66,16 +69,26 @@ export default function Home() {
           <div className="desktop-view">
             <SwiperTestimonial />
           </div>
-          <div className="px-3 md:px-0">
+          <div >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+            className={`px-3 md:px-0 `}
+          >
             <Box sx={{ flexGrow: 1 }}>
-            <Header
-              header="get in touch"
-              className=" text-[2.2rem] md:text-[3rem] unbound mt-11 uppercase"
-            />
-            <Header
-              header="Let's get down to Business!"
-              className="text-[1.4rem] md:text-[2.2rem] unbound"
-            />
+              <Header
+                header="get in touch"
+                className=" text-[2.2rem] md:text-[3rem] unbound mt-11 uppercase"
+              />
+              <Header
+                header="Let's get down to Business!"
+                className="text-[1.4rem] md:text-[2.2rem] unbound"
+              />
               <Grid
                 spacing={0}
                 justifyContent="center"
@@ -90,7 +103,9 @@ export default function Home() {
                 </Grid>
               </Grid>
             </Box>
+          </motion.div>
           </div>
+         
         </Container>
       </main>
     </>

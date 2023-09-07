@@ -39,7 +39,7 @@ export const profession: Profile[] = [
     id: 5,
     img: "https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312968/frontend_gvubtj.jpg",
     title: "Data Engineer",
-    link: "web-dev",
+    link: "/data-engr",
     class: "class-white",
   },
 ];

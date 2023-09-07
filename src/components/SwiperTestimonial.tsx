@@ -34,8 +34,12 @@ const SwiperTestimonial = () => {
     <>
       <div>
         <Header
-          header="Testimonials"
+          header="Praise"
           className="m-1 unbound uppercase text-center md:text-left text-[2rem] tracking-widest text-[burlywood]"
+        />
+        <Header
+          header="Some nice words from nice people"
+          className="unbound text-center md:text-left tracking-wide"
         />
         <Swiper
           slidesPerView={3}
@@ -49,15 +53,6 @@ const SwiperTestimonial = () => {
             Autoplay,
             Scrollbar,
           ]}
-          // keyboard={{
-          //   enabled: true,
-          // }}
-          // breakpoints={{
-          //   769: {
-          //     slidesPerView: 3,
-          //     slidesPerGroup: 3,
-          //   },
-          // }}
           scrollbar={false}
           navigation={true}
           pagination={{

@@ -8,7 +8,7 @@ import Link from "next/link";
 
 
 const CardListItem = ({ profession }: { profession: any }) => {
-  const [scale, setScale] = useState(1.15);
+  const [scale, setScale] = useState(1.07);
   return (
     <div>
       {profession.map((profile: any) => (

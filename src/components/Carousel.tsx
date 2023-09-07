@@ -35,8 +35,12 @@ const PortfolioCarousel = () => {
     <>
       <div id="profile">
         <Header
-          header="Profile"
+          header=" Work Profile"
           className="m-10 text-center unbound uppercase text-[2rem] tracking-widest text-[burlywood]"
+        />
+          <Header
+          header="A selection of few portfolio"
+          className="unbound text-center md:text-left tracking-wide"
         />
         <Swiper
           cssMode={true}
@@ -193,7 +197,7 @@ const PortfolioCarousel = () => {
                       data-scroll-speed="0.3"
                       className="img-text poppins text-[#FFFFFF]"
                     >
-                      website Development
+                      Data Engineer
                     </div>
                   </div>
                 </div>

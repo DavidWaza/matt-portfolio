@@ -335,7 +335,17 @@ label {
   color: red;
   margin-top: .25rem;
 }
+@layer components {
+  .nav-li {
+    @apply flex w-full leading-8 list-none focus:outline-none group py-2 tracking-normal opacity-50 hover:opacity-100 transition-all duration-200 ease-in-out;
+  }
+}
 
+@layer components {
+  .nav-link {
+    @apply h-full w-full py-2 text-lg text-white;
+  }
+}
 /* MEDIA QUERIES */
 /* Mobile views */
 @media only screen and (max-width: 480px) {

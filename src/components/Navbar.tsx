@@ -10,8 +10,13 @@ import FacebookTwoToneIcon from "@mui/icons-material/FacebookTwoTone";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Link from "next/link";
+import { useState } from "react";
+import Hamburger from "../components/reusable/Hamburger";
+import MenuOverlay from "./reusable/MenuOverlay";
 
 export default function NavAppBar() {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
   return (
     <Box sx={{ flexGrow: 1, height: "10vh" }}>
       <AppBar
@@ -47,17 +52,14 @@ export default function NavAppBar() {
             component="div"
             sx={{ flexGrow: 1, display: "flex", justifyContent: "center" }}
           >
-            <Link href="/" className='unbound font-[300] text-[0.73rem] md:text-[1.4rem] md:font-[600]'>OLUWADAMILARE</Link>
+            <Link
+              href="/"
+              className="unbound font-[300] text-[0.73rem] md:text-[1.4rem] md:font-[600] relative z-100"
+            >
+              OLUWADAMILARE
+            </Link>
           </Typography>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2, color: "burlywood" }}
-          >
-            <MenuIcon />
-          </IconButton>
+          
         </Toolbar>
       </AppBar>
     </Box>
