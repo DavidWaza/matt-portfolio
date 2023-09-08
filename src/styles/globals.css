@@ -412,6 +412,12 @@ label {
   transform: scale(1.1, 1.1);
   -webkit-transform: scale(1.1, 1.1);
 }
+.full-image-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* MEDIA QUERIES */
 /* Mobile views */
 @media only screen and (max-width: 480px) {
