@@ -16,26 +16,26 @@ const MobileTestimonial = () => {
       <Swiper
         slidesPerView={1}
         centeredSlides={true}
-        spaceBetween={10}
+        spaceBetween={0}
         mousewheel={true}
         keyboard={true}
         pagination={{
           type: "fraction",
-          clickable:true,
+          clickable: true,
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          {TestimonialWords.map(({ id, name, words }) => {
-            return (
-              <div key={id}>
+        {TestimonialWords.map(({ id, name, words }) => {
+          return (
+            <div key={id}>
+              <SwiperSlide>
                 <Testimonial name={name} words={words} />
-              </div>
-            );
-          })}
-        </SwiperSlide>
+              </SwiperSlide>
+            </div>
+          );
+        })}
       </Swiper>
     </>
   );
