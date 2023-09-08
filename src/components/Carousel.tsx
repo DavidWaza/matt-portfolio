@@ -23,7 +23,7 @@ const PortfolioCarousel = () => {
   return (
     <>
       <Swiper
-         slidesPerView={0}
+         slidesPerView={1}
          centeredSlides={true}
          spaceBetween={0}
          mousewheel={true}
