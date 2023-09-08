@@ -451,7 +451,7 @@ label {
   }
 
   .desktop-view {
-    display: none;
+    display: none !important;
   }
 
   .tablet-view {
@@ -481,7 +481,7 @@ label {
 }
 
 /* tablet views */
-@media only screen and (min-width: 481px) and (max-width:768px) {
+@media only screen and (min-width: 481px) and (max-width:767px) {
   .tablet-view {
     display: none;
   }
@@ -495,7 +495,7 @@ label {
   }
 }
 
-@media only screen and (min-width:769px) and (max-width:1024px) {
+@media only screen and (min-width:768px) and (max-width:1024px) {
   .tablet-view{
     display: none;
   }
@@ -503,7 +503,7 @@ label {
     display: block;
   }
   .desktop-view{
-    display: none;
+    display: none !important;
   }
   .img-text{
     right: 30px;
