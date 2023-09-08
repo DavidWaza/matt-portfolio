@@ -36,30 +36,28 @@ const PortfolioCarousel = () => {
       >
         <SwiperSlide>
           {(
-            <div className="full-image-slide">
-              <Link href="/photography">
-                <div className="img-container">
-                  <div className="img-hover">
-                    <figure>
-                      <Image
-                        alt="pic1"
-                        src="https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312966/matts_c3t2y8.jpg"
-                        width={600}
-                        height={600}
-                        loading="lazy"
-                      />
-                    </figure>
-                    <div
-                      data-scroll
-                      data-scroll-speed="0.3"
-                      className="img-text poppins text-[burlywood]"
-                    >
-                      <p>{`Photography`}</p>
-                    </div>
+            <Link href="/photography">
+              <div className="img-container">
+                <div className="img-hover">
+                  <figure>
+                    <Image
+                      alt="pic1"
+                      src="https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312966/matts_c3t2y8.jpg"
+                      width={500}
+                      height={500}
+                      loading="lazy"
+                    />
+                  </figure>
+                  <div
+                    data-scroll
+                    data-scroll-speed="0.3"
+                    className="img-text poppins text-[burlywood]"
+                  >
+                    <p>{`Photography`}</p>
                   </div>
                 </div>
-              </Link>
-            </div>
+              </div>
+            </Link>
           ) || <Skeleton />}
         </SwiperSlide>
         <SwiperSlide>

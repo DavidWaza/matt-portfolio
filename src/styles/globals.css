@@ -412,11 +412,7 @@ label {
   transform: scale(1.1, 1.1);
   -webkit-transform: scale(1.1, 1.1);
 }
-.full-image-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 /* MEDIA QUERIES */
 /* Mobile views */
@@ -431,7 +427,7 @@ label {
   }
 
   .swiper-slide.swiper-slide-active:first-child {
-    transform: translateX(50%);
+    /* transform: translateX(50%); */
     z-index: 2;
   }
 
