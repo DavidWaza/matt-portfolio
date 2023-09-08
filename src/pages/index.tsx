@@ -73,11 +73,11 @@ export default function Home() {
               <Box sx={{ flexGrow: 1 }}>
                 <Header
                   header="get in touch"
-                  className=" text-[2.2rem] md:text-[3rem] unbound mt-11 uppercase"
+                  className=" text-[1.5rem] text-center md:text-left md:text-[3rem] unbound mt-11 uppercase"
                 />
                 <Header
                   header="Let's get down to Business!"
-                  className="text-[1.4rem] md:text-[2.2rem] unbound"
+                  className="text-[1rem] text-center md:text-left md:text-[2.2rem] unbound"
                 />
                 <Grid
                   spacing={0}
