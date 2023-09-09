@@ -5,6 +5,7 @@ interface TestimonialProps {
   name: string;
   words: string;
   className?: string;
+  position:string;
 }
 const Testimonial: React.FC<TestimonialProps> = (props) => {
   return (
@@ -13,6 +14,7 @@ const Testimonial: React.FC<TestimonialProps> = (props) => {
       </div>
       <p className={styles.title}>{props.name}</p>
       <p className={styles.text}>{props.words}</p>
+      <p className={styles.position}>{props.position}</p>
     </div>
   );
 };

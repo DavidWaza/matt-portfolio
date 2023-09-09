@@ -27,11 +27,11 @@ const MobileTestimonial = () => {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        {TestimonialWords.map(({ id, name, words }) => {
+        {TestimonialWords.map(({ id, name, words, position }) => {
           return (
             <div key={id}>
               <SwiperSlide>
-                <Testimonial name={name} words={words} />
+                <Testimonial name={name} words={words} position={position} />
               </SwiperSlide>
             </div>
           );
