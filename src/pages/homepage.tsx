@@ -83,7 +83,7 @@ const HomePage: React.FC = () => {
                     aria-label="Thanks"
                     className="h-button centered syne text-index"
                     data-text="Download cv"
-                    href="#"
+                    href="https://drive.google.com/file/d/1px3jbIXiKgeSFDhuKQaFMk3-3497pUEv/view?usp=sharing"
                   >
                     <span>T</span>
                     <span>h</span>
