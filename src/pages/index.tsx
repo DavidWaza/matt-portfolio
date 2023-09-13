@@ -8,13 +8,17 @@ import SwiperTestimonial from "@/components/SwiperTestimonial";
 import ContactForms from "@/components/Forms";
 import Header from "@/components/reusable/BigHeader";
 import ContactInfo from "@/components/ContactInfo";
-import { motion, useScroll, AnimatePresence } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import MobileTestimonial from "@/components/Mobiletestimonial";
+import Image from "next/image";
 
 export default function Home() {
   const [isVisible, setVisible] = useState(true);
+  const [scrollY, setScrollY] = useState(0);
+
   const domRef = useRef(null);
+  const controls = useAnimation();
 
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -33,12 +37,48 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Define the animation parameters (you can customize these)
+    const animationProps = {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    };
+
+    // Define the scroll positions for each section
+    const section1ScrollPosition = 0;
+    const section2ScrollPosition = 400; // Adjust as needed
+
+    // Set the animation based on scroll position
+    if (scrollY >= section1ScrollPosition && scrollY < section2ScrollPosition) {
+      controls.start(animationProps);
+    } else {
+      controls.start({ opacity: 1, y: 100 });
+    }
+  }, [scrollY, controls]);
+
   return (
     <>
-      <main>
-        <HomePage />
+      <main className="">
+        <div className="h-[100vh] flex align-middle">
+          <div>
+            <HomePage />
+          </div>
+        </div>
         <Container>
-          <div className="mobile-view">
+          <div className="mobile-view h-[100vh]">
             <PortfolioCarousel />
           </div>
           <div ref={ref}>
@@ -56,18 +96,13 @@ export default function Home() {
           <div className="mobile-view">
             <MobileTestimonial />
           </div>
-          <div className="desktop-view">
+          <div className="desktop-view test-bg p-0 m-0 container-fluid">
             <SwiperTestimonial />
           </div>
-          <div>
+          <div className="h-[100vh] flex align-middle">
             <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.8,
-                delay: 0.5,
-                ease: [0, 0.71, 0.2, 1.01],
-              }}
+              initial={{ opacity: 1, y: 50 }}
+              animate={controls}
               className={`px-3 md:px-0 `}
             >
               <Box sx={{ flexGrow: 1 }}>
@@ -90,6 +125,15 @@ export default function Home() {
                   </Grid>
                   <Grid xs={12} md={6} lg={6}>
                     {/* <ContactForms initialValues={initialValues} /> */}
+                    <div className="flex justify-end">
+                    <Image
+                      src="/assets/contact.png"
+                      height={500}
+                      width={500}
+                      alt="img"
+                    />
+                    </div>
+                   
                   </Grid>
                 </Grid>
               </Box>

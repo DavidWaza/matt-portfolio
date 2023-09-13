@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
 import Tilt from "react-parallax-tilt";
 import localFont from "next/font/local";
 import Image from "next/image";

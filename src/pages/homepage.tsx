@@ -5,7 +5,6 @@ import { Container } from "@mui/material";
 import localFont from "next/font/local";
 import Link from "next/link";
 import { gsap } from "gsap";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
 import Typewriter from "typewriter-effect";
 import PrimaryButton from "@/components/reusable/Button";
 import Image from "next/image";
@@ -14,7 +13,6 @@ import Tilt from "react-parallax-tilt";
 const HomePage: React.FC = () => {
   const app = useRef<HTMLDivElement>(null);
   const tl = useRef<gsap.core.Timeline | null>(null);
-  const { scroll } = useLocomotiveScroll();
 
   // const [scale, setScale] = useState(0.15);
 

@@ -7,8 +7,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "@/styles/styles.module.css";
 import "swiper/css";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
 import Image from "next/image";
 import Header from "./reusable/BigHeader";
 import Link from "next/link";
@@ -58,7 +56,7 @@ const PortfolioCarousel = () => {
                 </div>
               </div>
             </Link>
-          ) || <Skeleton />}
+          )}
         </SwiperSlide>
         <SwiperSlide>
           {(
@@ -84,7 +82,7 @@ const PortfolioCarousel = () => {
                 </div>
               </div>
             </Link>
-          ) || <Skeleton />}
+          )}
         </SwiperSlide>
         <SwiperSlide>
           {(
@@ -110,7 +108,7 @@ const PortfolioCarousel = () => {
                 </div>
               </div>
             </Link>
-          ) || <Skeleton />}
+          )}
         </SwiperSlide>
         <SwiperSlide>
           {(
@@ -136,7 +134,7 @@ const PortfolioCarousel = () => {
                 </div>
               </div>
             </Link>
-          ) || <Skeleton />}
+          )}
         </SwiperSlide>
         <SwiperSlide>
           {(
@@ -162,7 +160,7 @@ const PortfolioCarousel = () => {
                 </div>
               </div>
             </Link>
-          ) || <Skeleton />}
+          )}
         </SwiperSlide>
       </Swiper>
     </>

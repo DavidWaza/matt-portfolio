@@ -6,6 +6,7 @@ import { Container, Grid, Box } from "@mui/material";
 import StarsIcon from "@mui/icons-material/Stars";
 import IntegrationCard from "@/components/reusable/Integration";
 import Marquee from "react-fast-marquee";
+import AnimateSlider from "@/components/Animate";
 
 const Photography = () => {
   return (
@@ -26,7 +27,7 @@ const Photography = () => {
               color: "white",
               fontSize: "3rem",
               mt: "40px",
-              animation: "rotate 4s linear infinite",
+              // animation: "rotate 4s linear infinite",
             }}
           />
         </div>
@@ -60,7 +61,7 @@ const Photography = () => {
             </Grid>
           </Box>
         </div>
-        <Box sx={{ flexGrow: 1, mb: 5, mt: 10 }}>
+        {/* <Box sx={{ flexGrow: 1, mb: 5, mt: 10 }}>
           <Grid container spacing={1}>
             <Grid item xs={12} md={6} lg={6}>
               <p className="uppercase unbound text-[2rem]">integration</p>
@@ -84,7 +85,8 @@ const Photography = () => {
               </div>
             </Grid>
           </Grid>
-        </Box>
+        </Box> */}
+        <AnimateSlider />
       </Container>
     </div>
   );
