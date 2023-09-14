@@ -8,7 +8,7 @@ const ContactInfo = () => {
     <>
       <div className="mt-6">
         <p className="Proxima text-[#B5AB99] text-[2rem] text-center md:text-left md:text-[2.5rem]">Contact Info</p>
-        <p className="avant text-[#B5AB99] text-lg text-center md:text-left">
+        <p className="avant-semi text-[#B5AB99] text-lg text-center md:text-left">
           Reach out to our team, we will definitely cook the best deal to help
           you get started.
         </p>

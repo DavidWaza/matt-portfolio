@@ -63,7 +63,7 @@
   opacity: 1;
   max-height: 0;
   transition: all 0.3s ease;
-  font-family: 'Avant Garde', sans-serif;
+  font-family: 'Avant Garde-Semi', sans-serif;
 }
 
 .card:hover {
@@ -165,7 +165,7 @@
   position: absolute;
   bottom: 10px;
   color: #E25F40;
-  font-family: 'Avant Garde', sans-serif;
+  font-family: 'Avant Garde-semi', sans-serif;
 }
 
 .container {

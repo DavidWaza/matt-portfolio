@@ -149,7 +149,7 @@ export default function Home() {
                   />
                   <Header
                     header="Let's get down to Business!"
-                    className="text-[1rem] font-normal text-center md:text-left md:text-[2rem] avant text-[#E25F40]"
+                    className="text-[1rem] font-normal text-center md:text-left md:text-[2rem] avant-semi text-[#E25F40]"
                   />
                   <Grid
                     spacing={0}
