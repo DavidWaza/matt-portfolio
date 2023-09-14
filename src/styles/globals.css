@@ -76,6 +76,7 @@ body {
 
 /* NAVBAR */
 .navbar {
+  background-color: #0D0D0D !important;
   padding-top: 5vh;
   padding-left: 5vh;
   padding-right: 5vh;
