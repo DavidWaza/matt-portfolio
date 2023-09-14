@@ -82,13 +82,13 @@ export default function Home() {
               <p className="text-[1.3rem] px-7 md:px-0 md:text-[2.8rem] leading-[31.2px] md:leading-[67.4px] avant-semi text-[#B5AB99]">
                 Welcome to my multifaceted portfolio! I am your go-to
                 destination for all things dazzling in the world of{" "}
-                <span className="text-[#E25F40]">diamonds</span>, cutting-edge{" "}
+                <span className="text-[#E25F40]">rare earth metals & quality gem-stones</span>, cutting-edge{" "}
                 <span className="text-[#E25F40]">web development</span>, and
                 seamless{" "}
                 <span className="text-[#E25F40]">e-commerce solutions</span> .
                 Explore the brilliance of my work and discover how i can help
                 you shine online and in the world of{" "}
-                <span className="text-[#E25F40]">precious metals, rare metals, & gemstones</span>.
+                <span className="text-[#E25F40]">precious metals</span>.
                 Let&apos;s craft your digital journey together!
                 <br />
                 <span className="flex justify-center md:justify-end pt-10 md:pt-0 text-[.888rem] md:text-[1.3rem] text-[#E25F40]">

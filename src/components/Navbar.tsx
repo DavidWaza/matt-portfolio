@@ -51,7 +51,7 @@ const NavAppBar = (props: Props) => {
 
   const drawer = (
     <Box sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2, color: '#B5AB99' }}>
+      <Typography variant="h6" className="avant" sx={{ my: 2, color: '#B5AB99' }}>
         OluwaDamilare
       </Typography>
       <Divider />
@@ -93,7 +93,7 @@ const NavAppBar = (props: Props) => {
               color: "#B5AB99",
               display: { xs: "none", sm: "block" },
             }}
-            className="proxima"
+            className="avant"
           >
             OLUWADAMILARE
           </Typography>
