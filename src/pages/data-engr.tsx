@@ -1,6 +1,5 @@
 import Banner from "@/components/reusable/Banner";
 import CardComponent from "@/components/reusable/FigureCard";
-import ProfileDetails from "@/components/reusable/ProfileDetails";
 import styles from "@/styles/profile.module.css";
 import { Container, Grid, Box } from "@mui/material";
 import StarsIcon from "@mui/icons-material/Stars";
@@ -15,7 +14,6 @@ const Photography = () => {
         title="Software Development & Data Engineering"
         className={styles.data_engr_img}
       />
-      <ProfileDetails body="We dream Digital. we deliver high-performance websites, campaigns and design to global clients" />
       <Container>
         <div className="text-center pt-[8rem] pb-[4rem]">
           <p className="uppercase text-[18px]">Our recent works</p>
