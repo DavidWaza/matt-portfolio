@@ -102,7 +102,11 @@ export default function Home() {
         </div>
         <section id="work">
         <Container>
-          <div className="mobile-view h-[100vh]">
+          <div className="mobile-view">
+          <Header
+                header="Work Profile"
+                className="uppercase text-center tracking-[.5em] font-bold text-[#B5AB99] pt-10"
+              />
             <PortfolioCarousel />
           </div>
           <div ref={ref}>
@@ -114,6 +118,7 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
             >
+             
               <ProfilePage />
             </motion.div>
           </div>
@@ -123,6 +128,10 @@ export default function Home() {
         <div className="bg-[#181818] py-10">
           <Container>
             <div className="mobile-view">
+            <Header
+                header="Testimonial"
+                className="uppercase text-center tracking-[.5em] font-bold text-[#B5AB99] pt-10"
+              />
               <MobileTestimonial />
             </div>
             <div className="desktop-view p-0 m-0">
@@ -155,21 +164,20 @@ export default function Home() {
                     </Grid>
                     <Grid xs={12} md={6} lg={6}>
                       {/* <ContactForms initialValues={initialValues} /> */}
-                      <div className="flex justify-end">
+                      {/* <div className="flex justify-end">
                         <Image
                           src="/assets/contact.png"
                           height={500}
                           width={500}
                           alt="img"
                         />
-                      </div>
+                      </div> */}
                     </Grid>
                   </Grid>
                 </Box>
               </motion.div>
             </div>
             </section>
-           
           </Container>
         </div>
       </main>

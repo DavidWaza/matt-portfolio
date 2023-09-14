@@ -13,7 +13,7 @@ const ContactInfo = () => {
           you get started.
         </p>
       </div>
-      <hr className="w-10/12 mt-5 m-auto md:mt-5 md:ml-0" />
+      <hr className="w-10/12 mt-5 m-auto md:mt-5 md:ml-0 bg-[#B5AB99]" />
       <div className="flex mt-11">
         <LocalPhoneSharpIcon sx={{ color: "#E25F40", fontSize: "2rem" }} />
         <p className="text-[1.3rem] md:text-[1.5] ml-2 avant text-[#B5AB99]">+1 (437) 436-4707</p>

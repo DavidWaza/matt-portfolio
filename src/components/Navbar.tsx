@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -42,22 +42,23 @@ const navItems = [
 
 const NavAppBar = (props: Props) => {
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
-    setMobileOpen((prevState) => !prevState);
+    console.log('toggle menu')
+    setMobileOpen((prevMobileOpen) => !prevMobileOpen);
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+    <Box sx={{ textAlign: 'center' }}>
+      <Typography variant="h6" sx={{ my: 2, color: '#B5AB99' }}>
         OluwaDamilare
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item.id} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText primary={item.item} />
             </ListItemButton>
           </ListItem>
@@ -71,7 +72,6 @@ const NavAppBar = (props: Props) => {
 
   return (
     <Box sx={{ display: "flex" }}>
-      {/* <CssBaseline /> */}
       <AppBar component="nav" className="navbar">
         <Toolbar>
           <IconButton
@@ -79,24 +79,28 @@ const NavAppBar = (props: Props) => {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: { sm: "none", color: "#E25F40" } }}
           >
             <MenuIcon />
           </IconButton>
+          {mobileOpen && drawer}
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, pt: 1, display: { xs: "none", sm: "block" } }}
-            className="unbound"
+            sx={{
+              flexGrow: 1,
+              pt: 1,
+              color: "#B5AB99",
+              display: { xs: "none", sm: "block" },
+            }}
+            className="proxima"
           >
             OLUWADAMILARE
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Link href={item.link || '/'} key={item.id} >
-                <li className="proxima uppercase navbar-list">
-                  {item.item}
-                </li>
+              <Link href={item.link || "/"} key={item.id}>
+                <li className="proxima uppercase navbar-list">{item.item}</li>
               </Link>
             ))}
           </Box>
@@ -128,5 +132,5 @@ const NavAppBar = (props: Props) => {
       </Box>
     </Box>
   );
-}
-export default NavAppBar
+};
+export default NavAppBar;
