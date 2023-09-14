@@ -17,6 +17,10 @@
   font-family: 'Avant Garde';
   src: url('/fonts/AvantGarde.woff') format('woff');
 }
+@font-face {
+  font-family: 'Avant Garde-Semi';
+  src: url('/fonts/avantgarded.woff') format('woff');
+}
 
 root {
   --foreground-rgb: 0, 0, 0;
@@ -72,6 +76,11 @@ body {
 }
 .avant{
   font-family: 'Avant Garde', sans-serif;
+}
+.avant-semi{
+  font-family: 'Avant Garde-Semi', sans-serif;
+  font-weight: 500;
+
 }
 
 /* NAVBAR */

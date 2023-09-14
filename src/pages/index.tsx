@@ -1,11 +1,9 @@
 import React, { Suspense, useRef, useState, useEffect } from "react";
 import PortfolioCarousel from "@/components/Carousel";
-import HomePage from "./about";
 import ProfilePage from "./profilepage";
-import Marquee from "react-fast-marquee";
 import { Grid, Box, Container } from "@mui/material";
 import SwiperTestimonial from "@/components/SwiperTestimonial";
-import ContactForms from "@/components/Forms";
+// import ContactForms from "@/components/Forms";
 import Header from "@/components/reusable/BigHeader";
 import ContactInfo from "@/components/ContactInfo";
 import { motion, useAnimation } from "framer-motion";
@@ -81,7 +79,7 @@ export default function Home() {
               className="uppercase tracking-[.5em] text-center md:text-left font-bold text-[#B5AB99] pt-10"
             />
             <div className="mt-[2vh]">
-              <p className="text-[1.3rem] px-7 md:px-0 md:text-[2.8rem] avant text-[#B5AB99]">
+              <p className="text-[1.3rem] px-7 md:px-0 md:text-[2.8rem] leading-[31.2px] md:leading-[67.4px] avant-semi text-[#B5AB99]">
                 Welcome to our multifaceted portfolio! We&apos;re your go-to
                 destination for all things dazzling in the world of{" "}
                 <span className="text-[#E25F40]">diamonds</span>, cutting-edge{" "}
@@ -147,7 +145,7 @@ export default function Home() {
                 <Box sx={{ flexGrow: 1 }}>
                   <Header
                     header="get in touch"
-                    className=" text-[1.5rem] text-[#B5AB99] tracking-[.2rem] text-center md:text-left md:text-[3.5rem] proxima mt-11 uppercase"
+                    className=" text-[1.5rem] text-[#B5AB99] text-center md:text-left md:text-[3.5rem] proxima mt-11 uppercase"
                   />
                   <Header
                     header="Let's get down to Business!"
