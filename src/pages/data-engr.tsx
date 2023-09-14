@@ -16,18 +16,10 @@ const Photography = () => {
       />
       <Container>
         <div className="text-center pt-[8rem] pb-[4rem]">
-          <p className="uppercase text-[18px]">Our recent works</p>
-          <p className="text-[2rem] md:text-[3.5rem] unbound">
+          <p className="uppercase text-[18px] text-[#E25F40]">Our recent works</p>
+          <p className="text-[2rem] md:text-[3.5rem] avant text-[#B5AB99]">
             New stunning projects for our amazing clients.
           </p>
-          <StarsIcon
-            sx={{
-              color: "white",
-              fontSize: "3rem",
-              mt: "40px",
-              // animation: "rotate 4s linear infinite",
-            }}
-          />
         </div>
         <div className="px-0 md:px-[20px]">
           <Box sx={{ flexGrow: 1, mb: 5 }}>

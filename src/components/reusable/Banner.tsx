@@ -13,7 +13,7 @@ const Banner: React.FC<BannerProps> = (props) => {
   return (
     <>
       <div className={props.className}>
-        <p className="z-10 relative text-center top-[50%] unbound text-[2rem]">
+        <p className="z-10 upper text-[#B5AB99] relative text-center top-[50%] proxima text-[3rem]">
           {props.title}
         </p>
         <div className="flex justify-center relative z-10 top-[55%] gap-3">

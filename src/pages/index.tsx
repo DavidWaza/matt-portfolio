@@ -72,7 +72,7 @@ export default function Home() {
     <>
       <main>
         <About />
-        <div className="bg-[#181818] py-10">
+        <div className="bg-[#181818] py-[10rem]">
           <Container>
             <Header
               header="Welcome Note"
