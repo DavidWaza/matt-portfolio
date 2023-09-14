@@ -10,7 +10,7 @@ import Image from "next/image";
 const CardList: React.FC = () => {
   return (
     <Container>
-      <section id="work">
+      <section>
         <Box sx={{ flexGrow: 1, pt:5 }}>
           <Grid container spacing={1}>
             <Grid xs={12} md={6} lg={6}>

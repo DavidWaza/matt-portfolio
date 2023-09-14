@@ -100,6 +100,7 @@ export default function Home() {
             </div>
           </Container>
         </div>
+        <section id="work">
         <Container>
           <div className="mobile-view h-[100vh]">
             <PortfolioCarousel />
@@ -117,6 +118,8 @@ export default function Home() {
             </motion.div>
           </div>
         </Container>
+        </section>
+       
         <div className="bg-[#181818] py-10">
           <Container>
             <div className="mobile-view">
@@ -125,6 +128,7 @@ export default function Home() {
             <div className="desktop-view p-0 m-0">
               <SwiperTestimonial />
             </div>
+            <section id='contact'>
             <div className="h-[100vh] flex align-middle">
               <motion.div
                 initial={{ opacity: 1, y: 50 }}
@@ -164,6 +168,8 @@ export default function Home() {
                 </Box>
               </motion.div>
             </div>
+            </section>
+           
           </Container>
         </div>
       </main>
