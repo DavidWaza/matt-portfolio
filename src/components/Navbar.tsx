@@ -1,67 +1,132 @@
 import * as React from "react";
-import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
+import CssBaseline from "@mui/material/CssBaseline";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
-import FacebookTwoToneIcon from "@mui/icons-material/FacebookTwoTone";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 import Link from "next/link";
-import { useState } from "react";
-import Hamburger from "../components/reusable/Hamburger";
-import MenuOverlay from "./reusable/MenuOverlay";
 
-export default function NavAppBar() {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+interface Props {
+  window?: () => Window;
+  href: any;
+}
+
+const drawerWidth = 240;
+
+const navItems = [
+  {
+    id: 1,
+    item: "About",
+    link: "#about",
+  },
+  {
+    id: 2,
+    item: "Work",
+    link: "#work",
+  },
+  {
+    id: 3,
+    item: "Contact",
+    link: "#contact",
+  },
+];
+
+const NavAppBar = (props: Props) => {
+  const { window } = props;
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
+
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+      <Typography variant="h6" sx={{ my: 2 }}>
+        OluwaDamilare
+      </Typography>
+      <Divider />
+      <List>
+        {navItems.map((item) => (
+          <ListItem key={item.id} disablePadding>
+            <ListItemButton sx={{ textAlign: "center" }}>
+              <ListItemText primary={item.item} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ flexGrow: 1, height: "10vh" }}>
-      <AppBar
-        position="static"
-        sx={{ backgroundColor: "transparent", marginTop: 3 }}
-      >
+    <Box sx={{ display: "flex" }}>
+      {/* <CssBaseline /> */}
+      <AppBar component="nav" className="navbar">
         <Toolbar>
-          <Box>
-            <FacebookTwoToneIcon
-              sx={{ fontSize: "18px", color: "burlywood", cursor: "pointer" }}
-            />
-            <InstagramIcon
-              sx={{
-                fontSize: "18px",
-                marginLeft: 1.5,
-                color: "burlywood",
-                cursor: "pointer",
-              }}
-            />
-            <TwitterIcon
-              sx={{
-                fontSize: "18px",
-                marginLeft: 1.5,
-                color: "burlywood",
-                cursor: "pointer",
-              }}
-            />
-          </Box>
-
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: "none" } }}
+          >
+            <MenuIcon />
+          </IconButton>
           <Typography
             variant="h6"
-            noWrap
             component="div"
-            sx={{ flexGrow: 1, display: "flex", justifyContent: "center" }}
+            sx={{ flexGrow: 1, pt: 1, display: { xs: "none", sm: "block" } }}
+            className="unbound"
           >
-            <Link
-              href="/"
-              className="unbound font-[300] text-[0.73rem] md:text-[1.4rem] md:font-[600] relative z-100"
-            >
-              OLUWADAMILARE
-            </Link>
+            OLUWADAMILARE
           </Typography>
-          
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            {navItems.map((item) => (
+              <Link href={item.link || '/'} key={item.id} >
+                <li className="proxima uppercase navbar-list">
+                  {item.item}
+                </li>
+              </Link>
+            ))}
+          </Box>
         </Toolbar>
       </AppBar>
+      <nav>
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </nav>
+      <Box component="main" sx={{ p: 3 }}>
+        <Toolbar />
+        <Typography></Typography>
+      </Box>
     </Box>
   );
 }
+export default NavAppBar

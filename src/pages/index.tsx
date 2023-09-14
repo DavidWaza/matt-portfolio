@@ -1,6 +1,6 @@
 import React, { Suspense, useRef, useState, useEffect } from "react";
 import PortfolioCarousel from "@/components/Carousel";
-import HomePage from "./homepage";
+import HomePage from "./about";
 import ProfilePage from "./profilepage";
 import Marquee from "react-fast-marquee";
 import { Grid, Box, Container } from "@mui/material";
@@ -12,6 +12,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import MobileTestimonial from "@/components/Mobiletestimonial";
 import Image from "next/image";
+import About from "./about";
 
 export default function Home() {
   const [isVisible, setVisible] = useState(true);
@@ -71,11 +72,33 @@ export default function Home() {
 
   return (
     <>
-      <main className="">
-        <div className="h-[100vh] flex align-middle">
-          <div>
-            <HomePage />
-          </div>
+      <main>
+        <About />
+        <div className="bg-[#181818] py-10">
+          <Container>
+            <Header
+              header="Welcome Note"
+              className="uppercase tracking-[.5em] text-center md:text-left font-bold text-[#B5AB99] pt-10"
+            />
+            <div className="mt-[2vh]">
+              <p className="text-[1.3rem] px-7 md:px-0 md:text-[2.8rem] avant text-[#B5AB99]">
+                Welcome to our multifaceted portfolio! We&apos;re your go-to
+                destination for all things dazzling in the world of{" "}
+                <span className="text-[#E25F40]">diamonds</span>, cutting-edge{" "}
+                <span className="text-[#E25F40]">web development</span>, and
+                seamless{" "}
+                <span className="text-[#E25F40]">e-commerce solutions</span> .
+                Explore the brilliance of our work and discover how we can help
+                you shine online and in the world of{" "}
+                <span className="text-[#E25F40]">precious gems</span>.
+                Let&apos;s craft your digital journey together!
+                <br />
+                <span className="flex justify-center md:justify-end pt-10 md:pt-0 text-[.888rem] md:text-[1.3rem] text-[#E25F40]">
+                  Matthew Kolawole
+                </span>
+              </p>
+            </div>
+          </Container>
         </div>
         <Container>
           <div className="mobile-view h-[100vh]">
@@ -84,7 +107,7 @@ export default function Home() {
           <div ref={ref}>
             <motion.div
               ref={domRef}
-              className={`desktop-view fade-in-section ${
+              className={`desktop-view fade-in-section  ${
                 inView ? "is-visible" : ""
               }`}
               initial={{ opacity: 0 }}
@@ -93,53 +116,56 @@ export default function Home() {
               <ProfilePage />
             </motion.div>
           </div>
-          <div className="mobile-view">
-            <MobileTestimonial />
-          </div>
-          <div className="desktop-view test-bg p-0 m-0 container-fluid">
-            <SwiperTestimonial />
-          </div>
-          <div className="h-[100vh] flex align-middle">
-            <motion.div
-              initial={{ opacity: 1, y: 50 }}
-              animate={controls}
-              className={`px-3 md:px-0 `}
-            >
-              <Box sx={{ flexGrow: 1 }}>
-                <Header
-                  header="get in touch"
-                  className=" text-[1.5rem] text-center md:text-left md:text-[3rem] unbound mt-11 uppercase"
-                />
-                <Header
-                  header="Let's get down to Business!"
-                  className="text-[1rem] text-center md:text-left md:text-[2.2rem] unbound"
-                />
-                <Grid
-                  spacing={0}
-                  justifyContent="center"
-                  alignItems="center"
-                  container
-                >
-                  <Grid xs={12} md={6} lg={6}>
-                    <ContactInfo />
-                  </Grid>
-                  <Grid xs={12} md={6} lg={6}>
-                    {/* <ContactForms initialValues={initialValues} /> */}
-                    <div className="flex justify-end">
-                    <Image
-                      src="/assets/contact.png"
-                      height={500}
-                      width={500}
-                      alt="img"
-                    />
-                    </div>
-                   
-                  </Grid>
-                </Grid>
-              </Box>
-            </motion.div>
-          </div>
         </Container>
+        <div className="bg-[#181818] py-10">
+          <Container>
+            <div className="mobile-view">
+              <MobileTestimonial />
+            </div>
+            <div className="desktop-view p-0 m-0">
+              <SwiperTestimonial />
+            </div>
+            <div className="h-[100vh] flex align-middle">
+              <motion.div
+                initial={{ opacity: 1, y: 50 }}
+                animate={controls}
+                className={`px-3 md:px-0 `}
+              >
+                <Box sx={{ flexGrow: 1 }}>
+                  <Header
+                    header="get in touch"
+                    className=" text-[1.5rem] text-[#B5AB99] tracking-[.2rem] text-center md:text-left md:text-[3.5rem] proxima mt-11 uppercase"
+                  />
+                  <Header
+                    header="Let's get down to Business!"
+                    className="text-[1rem] font-normal text-center md:text-left md:text-[2rem] avant text-[#E25F40]"
+                  />
+                  <Grid
+                    spacing={0}
+                    justifyContent="center"
+                    alignItems="center"
+                    container
+                  >
+                    <Grid xs={12} md={6} lg={6}>
+                      <ContactInfo />
+                    </Grid>
+                    <Grid xs={12} md={6} lg={6}>
+                      {/* <ContactForms initialValues={initialValues} /> */}
+                      <div className="flex justify-end">
+                        <Image
+                          src="/assets/contact.png"
+                          height={500}
+                          width={500}
+                          alt="img"
+                        />
+                      </div>
+                    </Grid>
+                  </Grid>
+                </Box>
+              </motion.div>
+            </div>
+          </Container>
+        </div>
       </main>
     </>
   );

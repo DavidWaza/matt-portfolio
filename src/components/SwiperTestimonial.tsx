@@ -26,12 +26,8 @@ const SwiperTestimonial = () => {
     <>
       <div>
         <Header
-          header="Praise"
-          className="m-1 unbound uppercase text-center md:text-left text-[2rem] tracking-widest text-[burlywood]"
-        />
-        <Header
-          header="Some nice words from nice people"
-          className="unbound text-center md:text-left tracking-wide"
+          header="Testimonials"
+          className="uppercase tracking-[.5em] font-bold text-[#B5AB99] pt-10"
         />
         <Swiper
           slidesPerView={3}

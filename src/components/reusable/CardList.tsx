@@ -10,17 +10,13 @@ import Image from "next/image";
 const CardList: React.FC = () => {
   return (
     <Container>
-      <div id="profile">
-        <Box sx={{ flexGrow: 1 }}>
+      <section id="work">
+        <Box sx={{ flexGrow: 1, pt:5 }}>
           <Grid container spacing={1}>
             <Grid xs={12} md={6} lg={6}>
               <Header
                 header="Work Profile"
-                className="mt-10 unbound uppercase text-center md:text-left text-[2rem] tracking-widest text-[burlywood]"
-              />
-              <Header
-                header="A selection of few portfolio"
-                className="unbound text-center md:text-left tracking-wide"
+                className="uppercase tracking-[.5em] font-bold text-[#B5AB99] pt-10"
               />
             </Grid>
             <Grid xs={12} md={6} lg={6}>
@@ -43,7 +39,7 @@ const CardList: React.FC = () => {
             })}
           </Grid>
         </Box>
-      </div>
+      </section>
     </Container>
   );
 };
