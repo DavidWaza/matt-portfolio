@@ -26,17 +26,17 @@ const navItems = [
   {
     id: 1,
     item: "About",
-    link: "#about",
+    link: "/#about",
   },
   {
     id: 2,
     item: "Work",
-    link: "#work",
+    link: "/#work",
   },
   {
     id: 3,
     item: "Contact",
-    link: "#contact",
+    link: "/#contact",
   },
 ];
 

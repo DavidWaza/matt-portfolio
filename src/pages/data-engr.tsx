@@ -12,7 +12,7 @@ import Link from "next/link";
 const data = [
   {
     id: 1,
-    img: "/assets/bhc.png",
+    img: "https://res.cloudinary.com/dgbl43ljm/image/upload/v1694787399/bhc_rbi8ps.png",
     title: "Beloved Healthcare Services",
     location: "Canada",
     service: "Health-Care Services",
@@ -27,7 +27,7 @@ const data = [
   },
   {
     id: 2,
-    img: "/assets/cig-about.png",
+    img: "https://res.cloudinary.com/dgbl43ljm/image/upload/v1694787399/cig-about_auvukk.png",
     title: "Cleveland International Group",
     location: "Canada",
     service: "Precious Stones",
@@ -57,7 +57,7 @@ const Photography = () => {
               <Grid item xs={12} md={6} lg={4}>
                 <CardComponent
                   link="https://belovehealthcare.com/"
-                  img="/assets/beloved.png"
+                  img="https://res.cloudinary.com/dgbl43ljm/image/upload/v1694787401/beloved_omnf70.png"
                   title="Beloved Health-Care Service"
                   subtitle="Healthcare Services"
                 />
@@ -65,7 +65,7 @@ const Photography = () => {
               <Grid item xs={12} md={6} lg={4}>
                 <CardComponent
                   link="https://clevelandintgroup.com/"
-                  img="/assets/cig.png"
+                  img="https://res.cloudinary.com/dgbl43ljm/image/upload/v1694787759/cig-hero_bccrvl.png"
                   title="Cleveland International Group"
                   subtitle="Diamond Groups"
                 />
