@@ -143,7 +143,7 @@ const Photography = () => {
                         >
                           <Grid container spacing={2}>
                             <Grid item xs={6} sm={6} lg={6}>
-                              <div className="flex justify-center">
+                              <div className="flex">
                                 <Image
                                   src="/assets/data-loc.svg"
                                   width={25}

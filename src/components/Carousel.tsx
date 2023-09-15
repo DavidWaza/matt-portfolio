@@ -138,7 +138,7 @@ const PortfolioCarousel = () => {
         </SwiperSlide>
         <SwiperSlide>
           {(
-            <Link href="/web-dev">
+            <Link href="/data-engr">
               <div className="img-container">
                 <div className="img-hover">
                   <figure>
