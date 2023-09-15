@@ -40,11 +40,11 @@ const Photography = () => {
     <div>
       <Banner
         title="Software Development & Data Engineering"
-        className={styles.data_engr_img}
+        className={` ${styles.data_engr_img}`}
       />
       <Container>
         <div className="text-center pt-[8rem] pb-[4rem]">
-          <p className="uppercase text-[18px] text-[#E25F40]">
+          <p className="uppercase md:text-[18px] text-[#E25F40]">
             Our recent works
           </p>
           <p className="text-[2rem] md:text-[3.5rem] avant text-[#B5AB99]">
@@ -110,27 +110,27 @@ const Photography = () => {
       </Container>
       <section className="bg-[#0d0d0d] py-[5rem]">
         <Container>
-          <div className="text-[2rem]">
+          <div className="text-[2rem] md:text-left text-center">
             <p className="avant-semi text-[#B5AB99]">
               Featured <span className="avant text-[#E25F40]">Projects</span>
             </p>
           </div>
-          <div className="py-[6rem]">
+          <div className="md:py-[6rem]">
             <Box sx={{ flexGrow: 1 }}>
-              <Grid container spacing={2}>
+              <Grid container spacing={3}>
                 {data.map((datum) => {
                   return (
                     <>
                       <Grid item xs={12} md={6} lg={6} key={datum.id}  sx={{mt:12}}>
-                        <Image
+                        <img
                           src={datum.img}
-                          width={500}
-                          height={500}
+                          className="w-full"
                           alt="img"
+                          loading="lazy"
                         />
                       </Grid>
                       <Grid item xs={12} md={6} lg={6}  sx={{mt:12}}>
-                        <div className="text-center">
+                        <div className="text-center -mt-[5rem] md:-mt-0">
                           <p className="avant text-2xl text-[#B5AB99]">
                             {datum.title}
                           </p>
