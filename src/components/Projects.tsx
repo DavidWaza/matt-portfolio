@@ -1,18 +1,18 @@
 import { Container, Box, Grid } from "@mui/material";
 
 const lists = [
-  "Company Landing Page",
-  "Business Portfolio",
-  "Personal Portfolio",
   "School Websites",
-  "Other Hard Stuffs",
+  "Personal Portfolio",
+  "Business Portfolio",
+  "Company Landing Page",
+  "Other Great Incredible Stuffs",
 ];
 
 const sides = [
     "Diamonds",
     "Photography",
-    "E-commerce Merchandizer",
     "Serial & Wall-Street Investor",
+    "E-commerce Merchandizer",
     "Precious Stones & Rare Earth Metals"
 ]
 const Projects = () => {
