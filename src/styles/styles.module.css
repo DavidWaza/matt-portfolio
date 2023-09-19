@@ -1,6 +1,6 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Unbounded:wght@200;300;400;500;600;700;800&display=swap');
+
 
 .card {
   min-width: 200px;
@@ -35,10 +35,11 @@
   background-size: 200px;
 }
 
-.icon>img{
+.icon>img {
   max-width: 60%;
   max-height: 60%;
 }
+
 .card .title {
   width: 100%;
   margin: 0;
@@ -106,7 +107,10 @@
   cursor: pointer;
 }
 
-.socialCard .sociallink1,.socialCard .sociallink2,.socialCard .sociallink3,.socialCard .sociallink4 {
+.socialCard .sociallink1,
+.socialCard .sociallink2,
+.socialCard .sociallink3,
+.socialCard .sociallink4 {
   position: relative;
   display: flex;
   align-items: center;
@@ -197,7 +201,7 @@
   height: 100%;
 }
 
-.img__container > img {
+.img__container>img {
   min-width: 100%;
   max-width: 100%;
 }
@@ -212,7 +216,7 @@
   left: 2rem;
 }
 
-.ticker > * {
+.ticker>* {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -221,15 +225,16 @@
   left: 0;
 }
 
-.ticker > div {
+.ticker>div {
   opacity: 0.2;
   border: solid 3px black;
 }
 
-.ticker > svg {
+.ticker>svg {
   fill: none;
   stroke: black;
   stroke-width: 3;
   stroke-dasharray: 120;
   stroke-dashoffset: 120;
 }
+

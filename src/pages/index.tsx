@@ -11,6 +11,7 @@ import { useInView } from "react-intersection-observer";
 import MobileTestimonial from "@/components/Mobiletestimonial";
 import Image from "next/image";
 import About from "./about";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   const [isVisible, setVisible] = useState(true);
@@ -80,16 +81,11 @@ export default function Home() {
             />
             <div className="mt-[2vh]">
               <p className="text-[1.3rem] px-7 md:px-0 md:text-[2.8rem] leading-[31.2px] md:leading-[67.4px] avant-semi text-[#B5AB99]">
-                Welcome to my multifaceted portfolio! I am your go-to
-                destination for all things dazzling in the world of{" "}
-                <span className="text-[#E25F40]">rare earth metals & quality gem-stones</span>, cutting-edge{" "}
-                <span className="text-[#E25F40]">web development</span>, and
-                seamless{" "}
-                <span className="text-[#E25F40]">e-commerce solutions</span> .
-                Explore the brilliance of my work and discover how i can help
-                you shine online and in the world of{" "}
-                <span className="text-[#E25F40]">precious metals</span>.
-                Let&apos;s craft your digital journey together!
+                Welcome to my versatile portfolio! As your dedicated destination
+                for all things remarkable in the realm of rare earth metals,
+                quality gemstones, and, most prominently, cutting-edge <span className="text-[#E25F40] font-bold">web
+                development.</span> I invite you to explore the brilliance of my work. I am here to help you
+                shine online. Let&apos;s join forces to craft your digital journey!
                 <br />
                 <span className="flex justify-center md:justify-end pt-10 md:pt-0 text-[.888rem] md:text-[1.3rem] text-[#E25F40]">
                   Matthew Kolawole
@@ -98,35 +94,37 @@ export default function Home() {
             </div>
           </Container>
         </div>
+        <div>
+          <Projects />
+        </div>
         <section id="work">
-        <Container>
-          <div className="mobile-view">
-          <Header
+          <Container>
+            <div className="mobile-view">
+              <Header
                 header="Work Profile"
                 className="uppercase text-center tracking-[.5em] font-bold text-[#B5AB99] pt-10"
               />
-            <PortfolioCarousel />
-          </div>
-          <div ref={ref}>
-            <motion.div
-              ref={domRef}
-              className={`desktop-view fade-in-section  ${
-                inView ? "is-visible" : ""
-              }`}
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-            >
-             
-              <ProfilePage />
-            </motion.div>
-          </div>
-        </Container>
+              <PortfolioCarousel />
+            </div>
+            <div ref={ref}>
+              <motion.div
+                ref={domRef}
+                className={`desktop-view fade-in-section  ${
+                  inView ? "is-visible" : ""
+                }`}
+                initial={{ opacity: 0 }}
+                animate={inView ? { opacity: 1 } : {}}
+              >
+                <ProfilePage />
+              </motion.div>
+            </div>
+          </Container>
         </section>
-       
+
         <div className="bg-[#181818] py-10">
           <Container>
             <div className="mobile-view">
-            <Header
+              <Header
                 header="Testimonial"
                 className="uppercase text-center tracking-[.5em] font-bold text-[#B5AB99] pt-10"
               />
@@ -135,46 +133,35 @@ export default function Home() {
             <div className="desktop-view p-0 m-0">
               <SwiperTestimonial />
             </div>
-            <section id='contact'>
-            <div className="h-[100vh] flex align-middle">
-              <motion.div
-                initial={{ opacity: 1, y: 50 }}
-                animate={controls}
-                className={`px-3 md:px-0 `}
-              >
-                <Box sx={{ flexGrow: 1 }}>
-                  <Header
-                    header="get in touch"
-                    className=" text-[1.5rem] text-[#B5AB99] text-center md:text-left md:text-[3.5rem] proxima mt-11 uppercase"
-                  />
-                  <Header
-                    header="Let's get down to Business!"
-                    className="text-[1rem] font-normal text-center md:text-left md:text-[2rem] avant-semi text-[#E25F40]"
-                  />
-                  <Grid
-                    spacing={0}
-                    justifyContent="center"
-                    alignItems="center"
-                    container
-                  >
-                    <Grid xs={12} md={6} lg={6}>
-                      <ContactInfo />
+            <section id="contact">
+              <div className="h-full py-[10rem]">
+                <motion.div
+                  initial={{ opacity: 1, y: 50 }}
+                  animate={controls}
+                  className={`px-3 md:px-0 `}
+                >
+                  <Box sx={{ flexGrow: 1 }}>
+                    <Header
+                      header="get in touch"
+                      className=" text-[1.5rem] text-[#B5AB99] text-center md:text-[3.5rem] proxima mt-11 uppercase"
+                    />
+                    <Header
+                      header="Let's get down to Business!"
+                      className="text-[1rem] font-normal text-center md:text-[2rem] avant-semi text-[#E25F40]"
+                    />
+                    <Grid
+                      spacing={0}
+                      justifyContent="center"
+                      alignItems="center"
+                      container
+                    >
+                      <Grid xs={12} md={12} lg={12}>
+                        <ContactInfo />
+                      </Grid>
                     </Grid>
-                    <Grid xs={12} md={6} lg={6}>
-                      {/* <ContactForms initialValues={initialValues} /> */}
-                      {/* <div className="flex justify-end">
-                        <Image
-                          src="/assets/contact.png"
-                          height={500}
-                          width={500}
-                          alt="img"
-                        />
-                      </div> */}
-                    </Grid>
-                  </Grid>
-                </Box>
-              </motion.div>
-            </div>
+                  </Box>
+                </motion.div>
+              </div>
             </section>
           </Container>
         </div>

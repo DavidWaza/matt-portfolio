@@ -45,22 +45,32 @@ const NavAppBar = (props: Props) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
-    console.log('toggle menu')
+    console.log("toggle menu");
     setMobileOpen((prevMobileOpen) => !prevMobileOpen);
   };
 
   const drawer = (
-    <Box sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" className="avant" sx={{ my: 2, color: '#B5AB99' }}>
+    <Box sx={{ textAlign: "center" }}>
+      <Typography
+        variant="h6"
+        className="avant"
+        sx={{ my: 2, color: "#B5AB99" }}
+      >
         OluwaDamilare
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item.id} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item.item} />
-            </ListItemButton>
+          <ListItem
+            key={item.id}
+            disablePadding
+            onClick={handleDrawerToggle} // Close the drawer when a menu item is clicked
+          >
+            <Link href={item.link || "/"}>
+              <ListItemButton sx={{ textAlign: "center" }}>
+                <ListItemText primary={item.item} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         ))}
       </List>
@@ -113,7 +123,7 @@ const NavAppBar = (props: Props) => {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: "block", sm: "none" },

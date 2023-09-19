@@ -8,19 +8,20 @@ interface Profile {
 
 export const profession: Profile[] = [
   {
+    
     id: 1,
-    img: "https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312966/matts_c3t2y8.jpg",
-    title: "photography",
-    link: "/photography",
+    img: "https://res.cloudinary.com/dgbl43ljm/image/upload/v1695062308/pexels-mati-mango-5952738_jyyxgo.jpg",
+    title: "Data Engineering",
+    link: "/data-engr",
     class: "class-burylwood",
   },
-  {
-    id: 2,
-    img: "https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312962/diamond-ring_xdjpzy.jpg",
-    title: "diamonds",
-    link: "diamonds",
-    class: "class-coal",
-  },
+  // {
+  //   id: 2,
+  //   img: "https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312962/diamond-ring_xdjpzy.jpg",
+  //   title: "diamonds",
+  //   link: "diamonds",
+  //   class: "class-coal",
+  // },
   {
     id: 3,
     img: "https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312965/gemstone_aedeqn.jpg",
@@ -28,19 +29,19 @@ export const profession: Profile[] = [
     link: "/precious-stones",
     class: "class-coffee",
   },
-  {
-    id: 4,
-    img: "https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312965/e-commerce_cxlm0n.jpg",
-    title: "e-commerce",
-    link: "/e-commerce",
-    class: "class-white",
-  },
+  // {
+  //   id: 4,
+  //   img: "https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312965/e-commerce_cxlm0n.jpg",
+  //   title: "e-commerce",
+  //   link: "/e-commerce",
+  //   class: "class-white",
+  // },
   {
     id: 5,
-    img: "https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312968/frontend_gvubtj.jpg",
-    title: "Data Engineer",
-    link: "/data-engr",
-    class: "class-white",
+    img: "https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312966/matts_c3t2y8.jpg",
+    title: "photography",
+    link: "/photography",
+    class: "class-burylwood",
   },
 ];
 

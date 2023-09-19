@@ -34,31 +34,31 @@ const PortfolioCarousel = () => {
       >
         <SwiperSlide>
           {(
-            <Link href="/photography">
-              <div className="img-container">
-                <div className="img-hover">
-                  <figure>
-                    <Image
-                      alt="pic1"
-                      src="https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312966/matts_c3t2y8.jpg"
-                      width={500}
-                      height={500}
-                      loading="lazy"
-                    />
-                  </figure>
-                  <div
-                    data-scroll
-                    data-scroll-speed="0.3"
-                    className="img-text poppins text-[burlywood]"
-                  >
-                    <p>{`Photography`}</p>
-                  </div>
-                </div>
-              </div>
-            </Link>
+             <Link href="/data-engr">
+             <div className="img-container">
+               <div className="img-hover">
+                 <figure>
+                   <Image
+                     alt="pic5"
+                     src="https://res.cloudinary.com/dgbl43ljm/image/upload/v1695062308/pexels-mati-mango-5952738_jyyxgo.jpg"
+                     width={500}
+                     height={500}
+                     loading="lazy"
+                   />
+                 </figure>
+                 <div
+                   data-scroll
+                   data-scroll-speed="0.3"
+                   className="img-text poppins text-[#FFFFFF]"
+                 >
+                   Data Engineer
+                 </div>
+               </div>
+             </div>
+           </Link>
           )}
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           {(
             <Link href="/diamonds">
               <div className="img-container">
@@ -83,7 +83,7 @@ const PortfolioCarousel = () => {
               </div>
             </Link>
           )}
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           {(
             <Link href="/precious-stones">
@@ -110,7 +110,7 @@ const PortfolioCarousel = () => {
             </Link>
           )}
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           {(
             <Link href="/e-commerce">
               <div className="img-container">
@@ -135,31 +135,32 @@ const PortfolioCarousel = () => {
               </div>
             </Link>
           )}
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           {(
-            <Link href="/data-engr">
-              <div className="img-container">
-                <div className="img-hover">
-                  <figure>
-                    <Image
-                      alt="pic5"
-                      src="https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312968/frontend_gvubtj.jpg"
-                      width={500}
-                      height={500}
-                      loading="lazy"
-                    />
-                  </figure>
-                  <div
-                    data-scroll
-                    data-scroll-speed="0.3"
-                    className="img-text poppins text-[#FFFFFF]"
-                  >
-                    Data Engineer
-                  </div>
-                </div>
-              </div>
-            </Link>
+           
+           <Link href="/photography">
+           <div className="img-container">
+             <div className="img-hover">
+               <figure>
+                 <Image
+                   alt="pic1"
+                   src="https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312966/matts_c3t2y8.jpg"
+                   width={500}
+                   height={500}
+                   loading="lazy"
+                 />
+               </figure>
+               <div
+                 data-scroll
+                 data-scroll-speed="0.3"
+                 className="img-text poppins text-[burlywood]"
+               >
+                 <p>{`Photography`}</p>
+               </div>
+             </div>
+           </div>
+         </Link>
           )}
         </SwiperSlide>
       </Swiper>
