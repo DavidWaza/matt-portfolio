@@ -13,6 +13,7 @@ import Image from "next/image";
 import About from "./about";
 import Projects from "@/components/Projects";
 
+
 export default function Home() {
   const [isVisible, setVisible] = useState(true);
   const [scrollY, setScrollY] = useState(0);

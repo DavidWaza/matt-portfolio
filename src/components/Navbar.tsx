@@ -1,146 +1,85 @@
-import { useState } from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import Link from "next/link";
-
-interface Props {
-  window?: () => Window;
-  href: any;
-}
-
-const drawerWidth = 240;
-
-const navItems = [
-  {
-    id: 1,
-    item: "About",
-    link: "/#about",
-  },
-  {
-    id: 2,
-    item: "Work",
-    link: "/#work",
-  },
-  {
-    id: 3,
-    item: "Contact",
-    link: "/#contact",
-  },
-];
-
-const NavAppBar = (props: Props) => {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  const handleDrawerToggle = () => {
-    console.log("toggle menu");
-    setMobileOpen((prevMobileOpen) => !prevMobileOpen);
-  };
-
-  const drawer = (
-    <Box sx={{ textAlign: "center" }}>
-      <Link href="/">
-        <Typography
-          variant="h6"
-          className="avant"
-          sx={{ my: 2, color: "#B5AB99" }}
-        >
-          OluwaDamilare
-        </Typography>
-      </Link>
-
-      <Divider />
-      <List>
-        {navItems.map((item) => (
-          <ListItem
-            key={item.id}
-            disablePadding
-            onClick={handleDrawerToggle} // Close the drawer when a menu item is clicked
-          >
-            <Link href={item.link || "/"}>
-              <ListItemButton sx={{ textAlign: "center" }}>
-                <ListItemText primary={item.item} />
-              </ListItemButton>
-            </Link>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
-
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
-
+const NavAppBar = () => {
   return (
-    <Box sx={{ display: "flex" }}>
-    
-      <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true,
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
-      <AppBar component="nav" className="navbar">
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="end"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none", color: "#E25F40"}}}
-          >
-            <MenuIcon />
-          </IconButton>
-          {mobileOpen && drawer}
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{
-              flexGrow: 1,
-              pt: 1,
-              color: "#B5AB99",
-              display: { xs: "none", sm: "block" },
-            }}
-            className="avant"
-          >
-            OLUWADAMILARE
-          </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Link href={item.link || "/"} key={item.id}>
-                <li className="proxima uppercase navbar-list">{item.item}</li>
-              </Link>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <div>
+      <div className="navbar bg-base-100">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <label tabIndex={0} className="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h7"
+                />
+              </svg>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#work">Portfolio</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="navbar-center">
+          <a className="btn btn-ghost normal-case text-xl avant-semi">
+            OluwaDamilare
+          </a>
+        </div>
+        <div className="navbar-end">
+          {/* <button className="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+          <button className="btn btn-ghost btn-circle">
+            <div className="indicator">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                />
+              </svg>
+              <span className="badge badge-xs badge-primary indicator-item"></span>
+            </div>
+          </button> */}
+        </div>
+      </div>
+    </div>
   );
 };
 export default NavAppBar;

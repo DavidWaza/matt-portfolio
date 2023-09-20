@@ -17,6 +17,7 @@
   font-family: 'Avant Garde';
   src: url('/fonts/AvantGarde.woff') format('woff');
 }
+
 @font-face {
   font-family: 'Avant Garde-Semi';
   src: url('/fonts/avantgarded.woff') format('woff');
@@ -50,9 +51,10 @@ body {
 
 }
 
-.css-11b3ww9-MuiPaper-root-MuiAppBar-root{
+.css-11b3ww9-MuiPaper-root-MuiAppBar-root {
   background-color: #0D0D0D !important;
 }
+
 /* FONTS */
 .mont {
   font-family: 'Montserrat', sans-serif;
@@ -74,42 +76,18 @@ body {
 .proxima {
   font-family: 'Proxima Nova', sans-serif;
 }
-.avant{
+
+.avant {
   font-family: 'Avant Garde', sans-serif;
 }
-.avant-semi{
+
+.avant-semi {
   font-family: 'Avant Garde-Semi', sans-serif;
   font-weight: 600;
 
 }
 
 /* NAVBAR */
-.navbar {
-  background-color: #0D0D0D !important;
-  padding-top: 5vh;
-  padding-left: 5vh;
-  padding-right: 5vh;
-  padding-bottom: 4vh;
-  font-family: 'Proxima Nova', sans-serif !important;
-}
-
-.navbar-list {
-  font-size: 1.175rem;
-  font-style: normal;
-  font-weight: 700;
-  list-style: none;
-  color: #b7ab98;
-  margin-top: 5px;
-  transition: all .3s ease-in;
-}
-
-.navbar-list:hover {
-
-  transition: all .3s ease-in;
-  color: #E25F40;
-  text-decoration: line-through;
-}
-
 
 .mobile-view {
   display: none;
@@ -498,10 +476,12 @@ label {
 
 /* MEDIA QUERIES */
 /* Mobile views */
+
 @media only screen and (max-width: 480px) {
-  .css-11b3ww9-MuiPaper-root-MuiAppBar-root{
+  .css-11b3ww9-MuiPaper-root-MuiAppBar-root {
     background-color: #0D0D0D !important;
   }
+
   .swiper-slide:first-child {
     transition: transform 100ms;
   }
@@ -568,9 +548,10 @@ label {
 
 /* tablet views */
 @media only screen and (min-width: 481px) and (max-width:767px) {
-  .css-11b3ww9-MuiPaper-root-MuiAppBar-root{
+  .css-11b3ww9-MuiPaper-root-MuiAppBar-root {
     background-color: #0D0D0D !important;
   }
+
   .tablet-view {
     display: none;
   }
@@ -585,9 +566,10 @@ label {
 }
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
-  .css-11b3ww9-MuiPaper-root-MuiAppBar-root{
+  .css-11b3ww9-MuiPaper-root-MuiAppBar-root {
     background-color: #0D0D0D !important;
   }
+
   .tablet-view {
     display: none;
   }

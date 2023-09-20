@@ -18,11 +18,11 @@ const sides = [
 const Projects = () => {
   return (
     <>
-      <div className="bg-[#0d0d0d] p-9">
+      <div className="bg-[#0d0d0d] p-9 py-[10rem]">
         <Container>
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} md={6} lg={6}>
+              <Grid item xs={12} md={6} lg={6} className="md:border-r-2 md:border-[#E25F40]">
                 <div className="px-6 py-7">
                   <p className="avant-semi text-[1.6rem] md:text-5xl text-[#B5AB99] text-center md:text-left">
                     I Build & Develope Business Websites from Scratch.
@@ -35,7 +35,7 @@ const Projects = () => {
                 </div>
               </Grid>
               <Grid item xs={12} md={6} lg={6}>
-              <div className="px-6 py-7">
+              <div className="md:px-[6rem] py-7">
                   <p className="avant-semi text-[1.6rem] md:text-5xl text-[#E25F40] text-center md:text-left">
                     I am also Big on Entrepreneurship & Investments
                   </p>
