@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 const NavAppBar = () => {
   return (
     <div>
       <div className="navbar bg-base-100">
         <div className="navbar-start">
-          <div className="dropdown">
+          <div className="dropdown z-10">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -25,13 +27,13 @@ const NavAppBar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a href="#about">About</a>
+                <Link href="/#about">About</Link>
               </li>
               <li>
-                <a href="#work">Portfolio</a>
+                <Link href="/#work">Portfolio</Link>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <Link href="/#contact">Contact</Link>
               </li>
             </ul>
           </div>
