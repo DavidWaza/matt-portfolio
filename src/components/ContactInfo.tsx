@@ -21,13 +21,13 @@ const ContactInfo = () => {
       <div className="flex justify-center mt-11">
         <EmailSharpIcon sx={{ color: "#E25F40", fontSize: "2rem" }} />
         <p className="text-[1rem] md:text-[1.3rem] ml-2 avant text-[#B5AB99]">
-          Damilarekolawole@gmail.com
+        Mattkolawole19@gmail.com
         </p>
       </div>
       <div className="flex justify-center mt-11">
         <LocationOnSharpIcon sx={{ color: "#E25F40", fontSize: "2rem" }} />
         <p className="text-[1rem] md:text-[1.3rem] ml-2 avant text-[#B5AB99]">
-          Number 12 Ontario Street, Ontario Canada.
+           Ontario Canada.
         </p>
       </div>
     </>
