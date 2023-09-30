@@ -61,7 +61,7 @@ export default function Home() {
     <>
       <main>
         <About />
-        <div className="bg-[#181818] py-[10rem]">
+        <div className="bg-[#181818] py-[12rem]">
           <Container>
             <Header
               header="Welcome Note"
@@ -86,15 +86,15 @@ export default function Home() {
             </div>
           </Container>
         </div>
-        <div>
+        <div className="">
           <Projects />
         </div>
-        <section id="work">
+        <section id="work" className="py-[12rem]">
           <Container>
             <div className="mobile-view">
               <Header
                 header="Work Profile"
-                className="uppercase text-center tracking-[.5em] font-bold text-[#B5AB99] pt-10"
+                className="uppercase text-center tracking-[.5em] font-bold text-[#B5AB99]"
               />
               <PortfolioCarousel />
             </div>
@@ -113,7 +113,7 @@ export default function Home() {
           </Container>
         </section>
 
-        <div className="bg-[#181818] py-10">
+        <div className="bg-[#181818] py-[12rem]">
           <Container>
             <div className="mobile-view">
               <Header
