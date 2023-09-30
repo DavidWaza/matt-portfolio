@@ -38,31 +38,6 @@ export default function Home() {
     requestAnimationFrame(raf);
   });
 
-  // useEffect(() => {
-  //   const currentRef = domRef.current;
-  //   if (currentRef) {
-  //     const observer = new IntersectionObserver((entries) => {
-  //       entries.forEach((entry) => setVisible(entry.isIntersecting));
-  //     });
-
-  //     observer.observe(currentRef);
-
-  //     return () => observer.unobserve(currentRef);
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrollY(window.scrollY);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   useEffect(() => {
     const animationProps = {
       opacity: 1,

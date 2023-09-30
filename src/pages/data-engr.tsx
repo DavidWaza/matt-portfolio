@@ -2,12 +2,9 @@ import Banner from "@/components/reusable/Banner";
 import CardComponent from "@/components/reusable/FigureCard";
 import styles from "@/styles/profile.module.css";
 import { Container, Grid, Box } from "@mui/material";
-import StarsIcon from "@mui/icons-material/Stars";
-import IntegrationCard from "@/components/reusable/Integration";
-import Marquee from "react-fast-marquee";
-import AnimateSlider from "@/components/Animate";
 import Image from "next/image";
 import Link from "next/link";
+import Accordion from "@/components/Accordion";
 
 const data = [
   {
@@ -35,6 +32,33 @@ const data = [
     link: "https://clevelandintgroup.com/",
   },
 ];
+
+const skills = [
+  {
+    image: "/assets/AWS.svg",
+    name: "AWS Cloud",
+  },
+  {
+    image: "/assets/Database.svg",
+    name: "MySQL",
+  },
+  {
+    image: "/assets/Git.svg",
+    name: "Version Control",
+  },
+  {
+    image: "/assets/Github.svg",
+    name: "GitHub",
+  },
+  {
+    image: "/assets/Python.svg",
+    name: "Python",
+  },
+  {
+    image: "/assets/React.svg",
+    name: "React js & React Native",
+  },
+];
 const Photography = () => {
   return (
     <div>
@@ -43,15 +67,15 @@ const Photography = () => {
         className={` ${styles.data_engr_img}`}
       />
       <Container>
-        <div className="text-center pt-[8rem] pb-[4rem]">
-          <p className="uppercase md:text-[18px] text-[#E25F40]">
+        <div className="text-center pt-[8rem]">
+          <p className="uppercase md:text-[1.6rem] text-[#E25F40]">
             Our recent works
           </p>
           <p className="text-[2rem] md:text-[3.5rem] avant text-[#B5AB99]">
             New stunning projects for our amazing clients.
           </p>
         </div>
-        <div className="px-0 md:px-[20px]">
+        <div className="px-0 md:px-[20px] py-[9rem]">
           <Box sx={{ flexGrow: 1, mb: 5 }}>
             <Grid container spacing={1}>
               <Grid item xs={12} md={6} lg={4}>
@@ -81,47 +105,28 @@ const Photography = () => {
             </Grid>
           </Box>
         </div>
-        {/* <Box sx={{ flexGrow: 1, mb: 5, mt: 10 }}>
-          <Grid container spacing={1}>
-            <Grid item xs={12} md={6} lg={6}>
-              <p className="uppercase unbound text-[2rem]">integration</p>
-              <p className="unbound text-[1.4rem] mt-2">
-                {" "}
-                We’re experts in integrating all major software platforms, apps
-                and digital tools to make your websites, products and campaigns
-                run smoother and easier then ever.
-              </p>
-            </Grid>
-            <Grid item xs={12} md={6} lg={6}>
-              <div className=" bg-[burlywood] h-full py-[15%]">
-                <Marquee>
-                  <IntegrationCard src="/assets/google.png" />
-                  <IntegrationCard src="/assets/uber.png" />
-                  <IntegrationCard src="/assets/github.png" />
-                  <IntegrationCard src="/assets/wp.png" />
-                  <IntegrationCard src="/assets/js.png" />
-                  <IntegrationCard src="/assets/linkedin.png" />
-                </Marquee>
-              </div>
-            </Grid>
-          </Grid>
-        </Box> */}
-        {/* <AnimateSlider /> */}
       </Container>
-      <section className="bg-[#0d0d0d] py-[5rem]">
+      <section className="bg-[#0d0d0d] py-[15rem]">
         <Container>
           <div className="text-[2rem] md:text-left text-center">
             <p className="avant-semi text-[#B5AB99]">
               Featured <span className="avant text-[#E25F40]">Projects</span>
             </p>
           </div>
-          <div className="md:py-[6rem]">
+          <div>
             <Box sx={{ flexGrow: 1 }}>
               <Grid container spacing={3}>
                 {data.map((datum) => {
                   return (
                     <>
-                      <Grid item xs={12} md={6} lg={6} key={datum.id}  sx={{mt:12}}>
+                      <Grid
+                        item
+                        xs={12}
+                        md={6}
+                        lg={6}
+                        key={datum.id}
+                        sx={{ mt: 12 }}
+                      >
                         <img
                           src={datum.img}
                           className="w-full"
@@ -129,9 +134,9 @@ const Photography = () => {
                           loading="lazy"
                         />
                       </Grid>
-                      <Grid item xs={12} md={6} lg={6}  sx={{mt:12}}>
-                        <div className="text-center -mt-[5rem] md:-mt-0">
-                          <p className="avant text-2xl text-[#B5AB99]">
+                      <Grid item xs={12} md={6} lg={6} sx={{ mt: 12 }}>
+                        <div className=" -mt-[5rem] md:-mt-0">
+                          <p className="avant text-3xl text-[#B5AB99]">
                             {datum.title}
                           </p>
                         </div>
@@ -150,7 +155,7 @@ const Photography = () => {
                                   height={50}
                                   alt="icon-loc"
                                 />
-                                <p className="avant-semi ml-3 text-[#B5AB99]">
+                                <p className="avant-semi ml-3 text-[#B5AB99] text-[1.4rem]">
                                   {datum.location}
                                 </p>
                               </div>
@@ -163,7 +168,7 @@ const Photography = () => {
                                   height={50}
                                   alt="icon-loc"
                                 />
-                                <p className="avant-semi ml-3 text-[#B5AB99]">
+                                <p className="avant-semi ml-3 text-[#B5AB99] text-[1.4rem]">
                                   {datum.service}
                                 </p>
                               </div>
@@ -171,7 +176,7 @@ const Photography = () => {
                           </Grid>
                         </Box>
                         <div className="pt-7">
-                          <p className="text-[#B5AB99] avant-semi  ">
+                          <p className="text-[#B5AB99] avant-semi text-[1.3rem]">
                             {datum.about}
                           </p>
                           <div>
@@ -183,7 +188,7 @@ const Photography = () => {
                                   height={50}
                                   alt="icon-loc"
                                 />
-                                <p className="avant-semi ml-3 text-[#E25F40]">
+                                <p className="avant-semi ml-3 text-[#E25F40] text-xl">
                                   View projects
                                 </p>
                               </div>
@@ -197,7 +202,47 @@ const Photography = () => {
               </Grid>
             </Box>
           </div>
+          <div className="mt-[3rem] py-[8rem]">
+            <p className="text-[#B5AB99] text-[2rem] avant-semi my-6">
+              Work <span className="avant text-[#E25F40]">Experiences</span>
+            </p>
+            <Accordion />
+          </div>
         </Container>
+        <div className="bg-[#000]">
+          <Container>
+            <div className="py-[15rem] text-center">
+              <p className="text-[#B5AB99] text-[2rem] avant-semi mb-3">
+                Dev.Skills & <span className="avant text-[#E25F40]">Tools</span>
+              </p>
+              <Box sx={{ flexGrow: 1 }}>
+                <Grid container spacing={2}>
+                  {skills.map((skill, index) => {
+                    return (
+                      <Grid item xs={4} md={4} lg={4} key={index}>
+                        <div className="mt-9 flex justify-center">
+                          <div className=" transform  transition-all duration-3000 ease-in-out hover:scale-110">
+                            <Image
+                              src={skill.image}
+                              width={100}
+                              height={100}
+                              alt="props"
+                            />
+                          </div>
+                        </div>
+                        <div className=" mt-[1.3rem]">
+                          <p className=" text-2xl avant-semi text-[#B5AB99]">
+                            {skill.name}
+                          </p>
+                        </div>
+                      </Grid>
+                    );
+                  })}
+                </Grid>
+              </Box>
+            </div>
+          </Container>
+        </div>
       </section>
     </div>
   );

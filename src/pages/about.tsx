@@ -33,7 +33,7 @@ const About: React.FC = () => {
             />
           </div>
           <div>
-            <Link href="https://drive.google.com/file/d/1px3jbIXiKgeSFDhuKQaFMk3-3497pUEv/view?usp=sharing">
+            <Link href="https://drive.google.com/file/d/1qh87vSPr6cgRRdDGAu6DnP5ezlRl217p/view?usp=sharing">
               <h5 className="proxima uppercase tracking-[.5em] text-[#b5ab99] mt-[7vh] cv-download">
                 Download CV
               </h5>

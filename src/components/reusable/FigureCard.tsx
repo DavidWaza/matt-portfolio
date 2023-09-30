@@ -38,10 +38,10 @@ const CardComponent:React.FC<CardComponentProps> = (props) => {
           alt="img-props"
           loading="lazy"
         />
-        <p className="text-[#232323] text-small text-center uppercase mt-[10%] font-normal tracking-normal">
+        <p className="text-[#0d0d0d] text-[1.2rem] text-center uppercase mt-[10%] font-normal tracking-normal">
           {props.title}
         </p>
-        <p className="text-[#939393] text-[12px] uppercase text-center">{props.subtitle}</p>
+        <p className="text-[#939393] text-[1rem] uppercase text-center">{props.subtitle}</p>
       </div>
     </>
   );
