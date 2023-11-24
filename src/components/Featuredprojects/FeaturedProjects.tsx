@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Grid, Container } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
-import Accordion from "@/components/Accordion";
 import WorkTimeline from "../WorkTimeline/WorkTimeline";
 
 const data = [
