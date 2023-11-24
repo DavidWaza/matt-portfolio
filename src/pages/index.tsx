@@ -1,6 +1,5 @@
 import React, { Suspense, useRef, useState, useEffect } from "react";
-import PortfolioCarousel from "@/components/Carousel";
-import ProfilePage from "./profilepage";
+
 import { Grid, Box, Container } from "@mui/material";
 import SwiperTestimonial from "@/components/SwiperTestimonial";
 import Header from "@/components/reusable/BigHeader";
@@ -11,51 +10,54 @@ import MobileTestimonial from "@/components/Mobiletestimonial";
 import About from "./about";
 import Projects from "@/components/Projects";
 import Lenis from "@studio-freight/lenis";
+import CardComponent from "@/components/reusable/FigureCard";
+import FeaturedProjects from "@/components/Featuredprojects/FeaturedProjects";
+import Skills from "@/components/Skills/Skills";
 
 export default function Home() {
-  const [isVisible, setVisible] = useState(true);
-  const [scrollY, setScrollY] = useState(0);
+  // const [isVisible, setVisible] = useState(true);
+  // const [scrollY, setScrollY] = useState(0);
 
-  const domRef = useRef(null);
-  const controls = useAnimation();
+  // const domRef = useRef(null);
+  // const controls = useAnimation();
 
-  const [ref, inView] = useInView({
-    triggerOnce: false,
-  });
+  // const [ref, inView] = useInView({
+  //   triggerOnce: false,
+  // });
 
-  useEffect(() => {
-    const lenis = new Lenis();
+  // useEffect(() => {
+  //   const lenis = new Lenis();
 
-    lenis.on("scroll", (e:Event) => {
-      console.log(e);
-    });
+  //   lenis.on("scroll", (e: Event) => {
+  //     console.log(e);
+  //   });
 
-    function raf(time:number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+  //   function raf(time: number) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
 
-    requestAnimationFrame(raf);
-  });
+  //   requestAnimationFrame(raf);
+  // });
 
-  useEffect(() => {
-    const animationProps = {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    };
+  // useEffect(() => {
+  //   const animationProps = {
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: { duration: 0.5 },
+  //   };
 
-    // Define the scroll positions for each section
-    const section1ScrollPosition = 0;
-    const section2ScrollPosition = 400; // Adjust as needed
+  //   // Define the scroll positions for each section
+  //   const section1ScrollPosition = 0;
+  //   const section2ScrollPosition = 400; // Adjust as needed
 
-    // Set the animation based on scroll position
-    if (scrollY >= section1ScrollPosition && scrollY < section2ScrollPosition) {
-      controls.start(animationProps);
-    } else {
-      controls.start({ opacity: 1, y: 100 });
-    }
-  }, [scrollY, controls]);
+  //   // Set the animation based on scroll position
+  //   if (scrollY >= section1ScrollPosition && scrollY < section2ScrollPosition) {
+  //     controls.start(animationProps);
+  //   } else {
+  //     controls.start({ opacity: 1, y: 100 });
+  //   }
+  // }, [scrollY, controls]);
 
   return (
     <>
@@ -96,9 +98,8 @@ export default function Home() {
                 header="Work Profile"
                 className="uppercase text-center tracking-[.5em] font-bold text-[#B5AB99]"
               />
-              <PortfolioCarousel />
             </div>
-            <div ref={ref}>
+            {/* <div ref={ref}>
               <motion.div
                 ref={domRef}
                 className={`desktop-view fade-in-section  ${
@@ -107,12 +108,54 @@ export default function Home() {
                 initial={{ opacity: 0 }}
                 animate={inView ? { opacity: 1 } : {}}
               >
-                <ProfilePage />
               </motion.div>
+            </div> */}
+            <div className="px-0 md:px-[20px]">
+              <div className="text-center">
+                <p className="uppercase md:text-[1.6rem] text-[#E25F40]">
+                  Our recent works
+                </p>
+                <p className="text-[2rem] md:text-[3.5rem] avant text-[#B5AB99]">
+                  New stunning projects for our amazing clients.
+                </p>
+              </div>
+              <Box sx={{ flexGrow: 1, mb: 5 }}>
+                <Grid container spacing={2}>
+                  <Grid item xs={12} md={6} lg={4}>
+                    <CardComponent
+                      link="https://belovehealthcare.com/"
+                      img="https://res.cloudinary.com/dgbl43ljm/image/upload/v1694787401/beloved_omnf70.png"
+                      title="Beloved Health-Care Service"
+                      subtitle="Healthcare Services"
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6} lg={4}>
+                    <CardComponent
+                      link="https://clevelandintgroup.com/"
+                      img="https://res.cloudinary.com/dgbl43ljm/image/upload/v1694787759/cig-hero_bccrvl.png"
+                      title="Cleveland International Group"
+                      subtitle="Diamond Groups"
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6} lg={4}>
+                    <CardComponent
+                      link="#"
+                      img="https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312968/frontend_gvubtj.jpg"
+                      title="Beloved Health-Care Service"
+                      subtitle="Healthcare Services"
+                    />
+                  </Grid>
+                </Grid>
+              </Box>
             </div>
           </Container>
         </section>
-
+        <section>
+          <FeaturedProjects />
+        </section>
+        <section>
+          <Skills />
+        </section>
         <div className="bg-[#181818] py-[12rem]">
           <Container>
             <div className="mobile-view">
@@ -129,7 +172,7 @@ export default function Home() {
               <div className="h-full py-[10rem]">
                 <motion.div
                   initial={{ opacity: 1, y: 50 }}
-                  animate={controls}
+                  // animate={controls}
                   className={`px-3 md:px-0 `}
                 >
                   <Box sx={{ flexGrow: 1 }}>

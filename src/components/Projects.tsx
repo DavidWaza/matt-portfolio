@@ -1,20 +1,14 @@
 import { Container, Box, Grid } from "@mui/material";
-
-const lists = [
-  "School Websites",
-  "Personal Portfolio",
-  "Business Portfolio",
-  "Company Landing Page",
-  "Other Great Incredible Stuffs",
-];
+import { webDev, entre } from "./data";
+import Link from "next/link";
 
 const sides = [
-    "Diamonds",
-    "Photography",
-    "Serial & Wall-Street Investor",
-    "E-commerce Merchandizer",
-    "Precious Stones & Rare Earth Metals"
-]
+  "Diamonds",
+  "Photography",
+  "Serial & Wall-Street Investor",
+  "E-commerce Merchandizer",
+  "Precious Stones & Rare Earth Metals",
+];
 const Projects = () => {
   return (
     <>
@@ -22,28 +16,62 @@ const Projects = () => {
         <Container>
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} md={6} lg={6} className="md:border-r-2 md:border-[#E25F40]">
-                <div className="px-6 py-7">
-                  <p className="avant-semi text-[1.6rem] md:text-5xl text-[#B5AB99] text-center md:text-left">
-                    I Build & Develope Business Websites from Scratch.
+              <Grid
+                item
+                xs={12}
+                md={6}
+                lg={6}
+                className="md:border-r-2 md:border-[#E25F40]"
+              >
+                <div className=" bg-[#DA6445] p-10">
+                  <p className="avant-semi text-[1.6rem] md:text-8xl text-base-100 text-center md:text-left">
+                    I Build
                   </p>
-                  <ul className="avant-semi mt-2 md:mt-3 text-[#E25F40] text-xl text-[0.89rem] md:text-xl text-center md:text-left">
-                    {lists.map((list, index) => {
-                      return <li key={index} className="mt-3">{list}</li>;
+                  <br />
+                  <p className="avant-semi text-[1.6rem] md:text-4xl text-base-100 text-center md:text-left">
+                    & design stuffs
+                  </p>
+                  <ul className="grid lg:grid-cols-2 avant-semi mt-2 md:mt-3 text-base-200 text-xl text-[0.89rem] md:text-xl">
+                    {webDev.map((list, index) => {
+                      return (
+                        <div key={index} className="flex gap-2 my-4">
+                          <img src={list.src} className="w-6 h-6" />
+                          <p className="font-normal">{list.name}</p>
+                        </div>
+                      );
                     })}
                   </ul>
+                  <Link href={"/#"}>
+                    <button className="w-full py-7 text-center text-[#DA6445] bg-black mt-7">
+                      Show Portfolio
+                    </button>
+                  </Link>
                 </div>
               </Grid>
               <Grid item xs={12} md={6} lg={6}>
-              <div className="md:px-[6rem] py-7">
-                  <p className="avant-semi text-[1.6rem] md:text-5xl text-[#E25F40] text-center md:text-left">
-                    I am also Big on Entrepreneurship & Investments
+                <div className=" bg-[#B4AB9A] p-10 mt-10">
+                  <p className="avant-semi text-[1.6rem] md:text-8xl text-base-100 text-center md:text-left">
+                    Serial Investor
                   </p>
-                  <ul className="avant-semi mt-3 text-[#B5AB99]  text-[0.89rem] md:text-xl text-center md:text-left">
-                    {sides.map((side, index) => {
-                      return <li key={index} className="mt-3">{side}</li>;
+                  <br />
+                  <p className="avant-semi text-[1.6rem] md:text-4xl text-base-100 text-center md:text-left">
+                    & Entrepreneurship
+                  </p>
+                  <ul className=" grid lg:grid-cols-2 w-full avant-semi mt-3 text-base-200 text-[0.89rem] md:text-xl">
+                    {entre.map((side, index) => {
+                      return (
+                        <div key={index} className="flex gap-2 my-4">
+                          <img src={side.src} className="w-6 h-6" />
+                          <p className="font-normal">{side.name}</p>
+                        </div>
+                      );
                     })}
                   </ul>
+                  <Link href={"/#"}>
+                    <button className="w-full py-7 text-center text-[#B4AB9A] bg-black mt-7">
+                      Investment opportunities
+                    </button>
+                  </Link>
                 </div>
               </Grid>
             </Grid>

@@ -10,8 +10,8 @@ const About: React.FC = () => {
     <section id="about">
       <div className="h-[80vh] bg-[#0D0D0D] m-0 p-0 relative">
         <div className="text-center">
-          <p className="avant uppercase text-[#B5AB99] font-bold tracking-[.5em] pt-[15vh] pb-[7vh] ">
-            Kolawole Matthew <span className="text-[#E25F40]">Oluwadamilare</span>
+          <p className="avant uppercase text-[#B5AB99] font-normal tracking-[.5em] pt-[15vh] pb-[7vh] ">
+            Kolawole Matthew <span className="text-[#E25F40] font-bold">Oluwadamilare</span>
           </p>
           <div
             className={` unbound uppercase px-[10vh] md:px-0 text-center text-[1.3rem] md:text-[4.7rem] grid place-content-center text-[#E25F40]`}
