@@ -43,7 +43,7 @@ const FeaturedProjects = () => {
       </div>
       <div>
         <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={3}>
+          <Grid container spacing={7}>
             {data.map((datum) => {
               return (
                 <>
@@ -62,12 +62,10 @@ const FeaturedProjects = () => {
                       loading="lazy"
                     />
                   </Grid>
-                  <Grid item xs={12} md={6} lg={6} sx={{ mt: 12 }}>
-                    <div className=" -mt-[5rem] md:-mt-0">
-                      <p className="avant text-3xl text-[#B5AB99]">
+                  <Grid item xs={12} md={6} lg={6} sx={{ mt: 12, alignItems:'middle' }}>
+                      <p className="avant text-xl text-[#B5AB99]">
                         {datum.title}
                       </p>
-                    </div>
                     <Box
                       sx={{
                         flexGrow: 1,
@@ -83,7 +81,7 @@ const FeaturedProjects = () => {
                               height={50}
                               alt="icon-loc"
                             />
-                            <p className="avant-semi ml-3 text-[#B5AB99] text-[1.4rem]">
+                            <p className="avant-semi ml-3 text-[#B5AB99] text-base">
                               {datum.location}
                             </p>
                           </div>
@@ -96,7 +94,7 @@ const FeaturedProjects = () => {
                               height={50}
                               alt="icon-loc"
                             />
-                            <p className="avant-semi ml-3 text-[#B5AB99] text-[1.4rem]">
+                            <p className="avant-semi ml-3 text-[#B5AB99] text-base">
                               {datum.service}
                             </p>
                           </div>
@@ -104,7 +102,7 @@ const FeaturedProjects = () => {
                       </Grid>
                     </Box>
                     <div className="pt-7">
-                      <p className="text-[#B5AB99] avant-semi text-[1.3rem]">
+                      <p className="text-[#B5AB99] text-base avant-semi text-[1.3rem]">
                         {datum.about}
                       </p>
                       <div>
@@ -131,7 +129,7 @@ const FeaturedProjects = () => {
         </Box>
       </div>
       <div className="mt-[3rem] py-[8rem]">
-        <p className="text-[#B5AB99] text-[2rem] avant-semi my-6">
+        <p className="text-[#B5AB99] text-[2rem] avant-semi py-10 mb-10">
           Work <span className="avant text-[#E25F40]">Experiences</span>
         </p>
         <WorkTimeline
