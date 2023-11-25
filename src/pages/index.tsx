@@ -10,9 +10,10 @@ import MobileTestimonial from "@/components/Mobiletestimonial";
 import About from "./about";
 import Projects from "@/components/Projects";
 import Lenis from "@studio-freight/lenis";
-import CardComponent from "@/components/reusable/FigureCard";
 import FeaturedProjects from "@/components/Featuredprojects/FeaturedProjects";
 import Skills from "@/components/Skills/Skills";
+import WelcomeNote from "@/components/WelcomeNote/WelcomeNote";
+import RecentWorks from "@/components/RecentWorks/RecentWorks";
 
 export default function Home() {
   // const [isVisible, setVisible] = useState(true);
@@ -63,92 +64,14 @@ export default function Home() {
     <>
       <main>
         <About />
-        <div className="bg-[#181818] py-[12rem]">
+        <div className="bg-[#181818] py-[5rem]">
           <Container>
-            <Header
-              header="Welcome Note"
-              className="uppercase tracking-[.5em] text-center md:text-left font-bold text-[#B5AB99] pt-10"
-            />
-            <div className="mt-[2vh]">
-              <p className="text-[1.3rem] px-7 md:px-0 md:text-[2.8rem] leading-[31.2px] md:leading-[67.4px] avant-semi text-[#B5AB99]">
-                Welcome to my versatile portfolio! As your dedicated destination
-                for all things remarkable in the realm of rare earth metals,
-                quality gemstones, and, most prominently, cutting-edge{" "}
-                <span className="text-[#E25F40] font-bold">
-                  web development.
-                </span>{" "}
-                I invite you to explore the brilliance of my work. I am here to
-                help you shine online. Let&apos;s join forces to craft your
-                digital journey!
-                <br />
-                <span className="flex justify-center md:justify-end pt-10 md:pt-0 text-[.888rem] md:text-[1.3rem] text-[#E25F40]">
-                  Matthew Kolawole
-                </span>
-              </p>
-            </div>
+            <WelcomeNote />
           </Container>
         </div>
-        <div className="">
-          <Projects />
-        </div>
-        <section id="work" className="py-[12rem]">
-          <Container>
-            <div className="mobile-view">
-              <Header
-                header="Work Profile"
-                className="uppercase text-center tracking-[.5em] font-bold text-[#B5AB99]"
-              />
-            </div>
-            {/* <div ref={ref}>
-              <motion.div
-                ref={domRef}
-                className={`desktop-view fade-in-section  ${
-                  inView ? "is-visible" : ""
-                }`}
-                initial={{ opacity: 0 }}
-                animate={inView ? { opacity: 1 } : {}}
-              >
-              </motion.div>
-            </div> */}
-            <div className="px-0 md:px-[20px]">
-              <div className="text-center">
-                <p className="uppercase md:text-[1.6rem] text-[#E25F40]">
-                  Our recent works
-                </p>
-                <p className="text-[2rem] md:text-[3.5rem] avant text-[#B5AB99]">
-                  New stunning projects for our amazing clients.
-                </p>
-              </div>
-              <Box sx={{ flexGrow: 1, mb: 5 }}>
-                <Grid container spacing={2}>
-                  <Grid item xs={12} md={6} lg={4}>
-                    <CardComponent
-                      link="https://belovehealthcare.com/"
-                      img="https://res.cloudinary.com/dgbl43ljm/image/upload/v1694787401/beloved_omnf70.png"
-                      title="Beloved Health-Care Service"
-                      subtitle="Healthcare Services"
-                    />
-                  </Grid>
-                  <Grid item xs={12} md={6} lg={4}>
-                    <CardComponent
-                      link="https://clevelandintgroup.com/"
-                      img="https://res.cloudinary.com/dgbl43ljm/image/upload/v1694787759/cig-hero_bccrvl.png"
-                      title="Cleveland International Group"
-                      subtitle="Diamond Groups"
-                    />
-                  </Grid>
-                  <Grid item xs={12} md={6} lg={4}>
-                    <CardComponent
-                      link="#"
-                      img="https://res.cloudinary.com/dgbl43ljm/image/upload/v1693312968/frontend_gvubtj.jpg"
-                      title="Beloved Health-Care Service"
-                      subtitle="Healthcare Services"
-                    />
-                  </Grid>
-                </Grid>
-              </Box>
-            </div>
-          </Container>
+        <Projects />
+        <section id="work" className="py-[7rem]">
+          <RecentWorks />
         </section>
         <section>
           <FeaturedProjects />
