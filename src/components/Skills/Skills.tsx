@@ -41,7 +41,7 @@ const Skills = () => {
             <Grid container spacing={2}>
               {skills.map((skill, index) => {
                 return (
-                  <Grid item xs={12} md={4} lg={4} key={index}>
+                  <Grid item xs={6} md={4} lg={4} key={index}>
                     <div className="mt-9 flex justify-center">
                       <div className=" transform  transition-all duration-3000 ease-in-out hover:scale-110">
                         <Image

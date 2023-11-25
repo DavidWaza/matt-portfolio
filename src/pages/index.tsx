@@ -70,10 +70,10 @@ export default function Home() {
           </Container>
         </div>
         <Projects />
-        <section id="work" className="py-[7rem]">
+        <section id="work" className="py-[7rem] lg:px-2 px-10">
           <RecentWorks />
         </section>
-        <section>
+        <section className="lg:px-2 px-10">
           <FeaturedProjects />
         </section>
         <section>
