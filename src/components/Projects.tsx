@@ -16,22 +16,16 @@ const Projects = () => {
         <Container>
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
-              <Grid
-                item
-                xs={12}
-                md={6}
-                lg={6}
-                className="md:border-r-2 md:border-[#E25F40]"
-              >
-                <div className=" bg-[#DA6445] p-10">
-                  <p className="avant-semi text-[1.6rem] md:text-8xl text-base-100 text-center md:text-left">
+              <Grid item xs={12} md={6} lg={6}>
+                <div className=" bg-[#DA6445] p-10 hover:scale-105 hover:transition-all hover:ease-in duration-300 delay-150">
+                  <p className="avant-semi text-[1.6rem] md:text-8xl text-[#1D232A] text-center md:text-left">
                     I Build
                   </p>
                   <br />
-                  <p className="avant-semi text-[1.6rem] md:text-4xl text-base-100 text-center md:text-left">
+                  <p className="avant-semi text-[1.6rem] md:text-4xl text-[#1D232A] text-center md:text-left">
                     & design stuffs
                   </p>
-                  <ul className="grid lg:grid-cols-2 avant-semi mt-2 md:mt-3 text-base-200 text-xl text-[0.89rem] md:text-xl">
+                  <ul className="grid lg:grid-cols-2 avant-semi mt-2 md:mt-3 text-[#1D232A] text-xl text-[0.89rem] md:text-xl">
                     {webDev.map((list, index) => {
                       return (
                         <div key={index} className="flex gap-2 my-4">
@@ -42,25 +36,25 @@ const Projects = () => {
                     })}
                   </ul>
                   <Link href={"/#"}>
-                    <button className="w-full py-7 text-center text-[#DA6445] bg-black mt-7">
+                    <button className="w-full py-7 text-center text-[#DA6445] bg-black mt-7 hover:bg-transparent ease-in hover:text-black duration-300 hover:border-2 border-black">
                       Show Portfolio
                     </button>
                   </Link>
                 </div>
               </Grid>
               <Grid item xs={12} md={6} lg={6}>
-                <div className=" bg-[#B4AB9A] p-10 mt-10">
-                  <p className="avant-semi text-[1.6rem] md:text-8xl text-base-100 text-center md:text-left">
-                    Serial Investor
+                <div className=" bg-[#B4AB9A] p-10 hover:scale-105 hover:transition-all hover:ease-in duration-300 delay-150">
+                  <p className="avant-semi text-[1.6rem] md:text-8xl text-[#1D232A] text-center md:text-left">
+                    Prolific Investor
                   </p>
                   <br />
-                  <p className="avant-semi text-[1.6rem] md:text-4xl text-base-100 text-center md:text-left">
-                    & Entrepreneurship
+                  <p className="avant-semi text-[1.6rem] md:text-4xl text-[#1D232A] text-center md:text-left">
+                    & Entrepreneur
                   </p>
-                  <ul className=" grid lg:grid-cols-2 w-full avant-semi mt-3 text-base-200 text-[0.89rem] md:text-xl">
+                  <ul className=" grid lg:grid-cols-2 w-full avant-semi mt-3 text-[#1D232A] text-[0.89rem] md:text-xl">
                     {entre.map((side, index) => {
                       return (
-                        <div key={index} className="flex gap-2 my-4">
+                        <div key={index} className="flex gap-2 my-[7px]">
                           <img src={side.src} className="w-6 h-6" />
                           <p className="font-normal">{side.name}</p>
                         </div>
@@ -68,7 +62,7 @@ const Projects = () => {
                     })}
                   </ul>
                   <Link href={"/#"}>
-                    <button className="w-full py-7 text-center text-[#B4AB9A] bg-black mt-7">
+                    <button className="w-full py-7 text-center text-[#B4AB9A] bg-black mt-7 hover:bg-transparent ease-in hover:text-black duration-300 hover:border-2 border-black">
                       Investment opportunities
                     </button>
                   </Link>

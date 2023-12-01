@@ -3,7 +3,11 @@
 export const webDev = [
   {
     src: "/assets/code.svg",
-    name: "School Websites",
+    name: "Websites/Mobile Development",
+  },
+  {
+    src: "/assets/code.svg",
+    name: "UI/UX Design",
   },
   {
     src: "/assets/code.svg",
