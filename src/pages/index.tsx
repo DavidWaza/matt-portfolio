@@ -71,7 +71,7 @@ export default function Home() {
         </div>
         <Projects />
         <section id="work" className="py-[7rem] lg:px-2 px-7">
-          <RecentWorks />
+          {/* <RecentWorks /> */}
         </section>
         <section className="lg:px-2 px-7">
           <FeaturedProjects />
