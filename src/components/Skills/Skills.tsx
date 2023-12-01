@@ -4,12 +4,20 @@ import Image from "next/image";
 
 const skills = [
   {
-    image: "/assets/AWS.svg",
-    name: "AWS Cloud",
+    image: "/assets/Python.svg",
+    name: "Python",
   },
   {
-    image: "/assets/Database.svg",
-    name: "MySQL",
+    image: "/assets/React.svg",
+    name: "React js & React Native",
+  },
+  {
+    image: "/assets/machine.svg",
+    name: "Machine Learning",
+  },
+  {
+    image: "/assets/AWS.svg",
+    name: "AWS Cloud",
   },
   {
     image: "/assets/Git.svg",
@@ -18,14 +26,6 @@ const skills = [
   {
     image: "/assets/Github.svg",
     name: "GitHub",
-  },
-  {
-    image: "/assets/Python.svg",
-    name: "Python",
-  },
-  {
-    image: "/assets/React.svg",
-    name: "React js & React Native",
   },
 ];
 

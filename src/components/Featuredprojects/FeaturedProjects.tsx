@@ -137,14 +137,7 @@ const FeaturedProjects = () => {
           company="Nigerian National Petroleum Corporation (NNPC) Towers"
           role="Intern Network Engineer"
         >
-          <p className="mt-5">
-            Worked in the department of telecom and networking as an intern, my
-            job was to run system maintenance and to be standby for any error
-            with the network connection, system malfunction or software error
-            for the PPMC building in the NNPC headquarters and I had a team of
-            interns that worked with me as the head of interns in telecom and
-            network department .
-          </p>
+          
         </WorkTimeline>
         <br />
         <br />
@@ -153,15 +146,7 @@ const FeaturedProjects = () => {
           company=" Centrifuge group Solution"
           role="Intern software Developer"
         >
-          <p className="mt-5">
-            Wrote clean, clear, and well-tested code for various projects.
-            Ensured that bug reports were remedied, and all issues were handled
-            in a timely manner. Collaborated with other developers to identify
-            and alleviate the number of bugs in the software. Led a team of 3
-            developers in the analysis and rebuild of software from the ground
-            up through to completion. Developed the company&apos;s website at
-            https://www.centrifugegroup.com/ .
-          </p>
+         
         </WorkTimeline>
         <br />
         <br />
@@ -170,17 +155,7 @@ const FeaturedProjects = () => {
           company="Personal Photographer, Assembly"
           role="Visual Aide"
         >
-          <p className="mt-5">
-            Worked directly with the Speaker of the oyo state house of
-            assembly(Rt Hon Debo Ogundoyin) and the office of the Executive
-            Governor of Oyo state (Gov Engr Seyi Makinde ) to achieve a well
-            packaged and presentable media front and capture the very essential
-            moment in the government so as to bring awareness to the people on
-            the accomplishment of the government and to capture all aspect of
-            life of the people of Oyo state to create awareness to the
-            government on the impact of the decisions they make to the people
-            bringing to the spotlight on what needs to be done next
-          </p>
+         
         </WorkTimeline>
       </div>
     </Container>
