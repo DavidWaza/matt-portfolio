@@ -22,13 +22,13 @@ const Projects = () => {
                     I Build
                   </p>
                   <br />
-                  <p className="avant-semi text-[1.6rem] md:text-4xl text-[#1D232A] text-center md:text-left">
+                  <p className="avant-semi text-[1.6rem] md:text-4xl text-[#1D232A] text-center md:text-left -mt-8">
                     & design stuffs
                   </p>
                   <ul className="grid lg:grid-cols-2 avant-semi mt-2 md:mt-3 text-[#1D232A] text-xl text-[0.89rem] md:text-xl">
                     {webDev.map((list, index) => {
                       return (
-                        <div key={index} className="flex gap-2 my-4">
+                        <div key={index} className="flex gap-2 lg:my-4 my-[7px]">
                           <img src={list.src} className="w-6 h-6" />
                           <p className="font-normal">{list.name}</p>
                         </div>
@@ -48,7 +48,7 @@ const Projects = () => {
                     Prolific Investor
                   </p>
                   <br />
-                  <p className="avant-semi text-[1.6rem] md:text-4xl text-[#1D232A] text-center md:text-left">
+                  <p className="avant-semi text-[1.6rem] md:text-4xl text-[#1D232A] text-center md:text-left -mt-8">
                     & Entrepreneur
                   </p>
                   <ul className=" grid lg:grid-cols-2 w-full avant-semi mt-3 text-[#1D232A] text-[0.89rem] md:text-xl">
