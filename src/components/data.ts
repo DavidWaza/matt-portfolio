@@ -11,15 +11,11 @@ export const webDev = [
   },
   {
     src: "/assets/code.svg",
-    name: "Personal Portfolio",
+    name: "Corporate Identity Development",
   },
   {
     src: "/assets/code.svg",
-    name: "Business Portfolio",
-  },
-  {
-    src: "/assets/code.svg",
-    name: "Company Landing Page",
+    name: "Data Engineering",
   },
  
 ];
