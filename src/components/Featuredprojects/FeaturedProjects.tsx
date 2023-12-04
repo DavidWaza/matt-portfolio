@@ -31,8 +31,6 @@ const data = [
   },
 ];
 
-
-
 const FeaturedProjects = () => {
   return (
     <Container>
@@ -62,10 +60,16 @@ const FeaturedProjects = () => {
                       loading="lazy"
                     />
                   </Grid>
-                  <Grid item xs={12} md={6} lg={6} sx={{ mt: 12, alignItems:'middle' }}>
-                      <p className="avant text-xl text-[#B5AB99]">
-                        {datum.title}
-                      </p>
+                  <Grid
+                    item
+                    xs={12}
+                    md={6}
+                    lg={6}
+                    sx={{ mt: 12, alignItems: "middle" }}
+                  >
+                    <p className="avant text-xl text-[#B5AB99]">
+                      {datum.title}
+                    </p>
                     <Box
                       sx={{
                         flexGrow: 1,
@@ -136,27 +140,28 @@ const FeaturedProjects = () => {
           timeline="March 2017 - October 2017"
           company="Nigerian National Petroleum Corporation (NNPC) Towers"
           role="Intern Network Engineer"
-        >
-          
-        </WorkTimeline>
+        ></WorkTimeline>
         <br />
         <br />
         <WorkTimeline
-          timeline=" November 2016 - March 2017"
-          company=" Centrifuge group Solution"
-          role="Intern software Developer"
-        >
-         
-        </WorkTimeline>
+          timeline="March 2017 - Oct 2017"
+          company="Pipelines and Products Marketing Company"
+          role="Network Engineer"
+        ></WorkTimeline>
         <br />
         <br />
         <WorkTimeline
-          timeline="November 2018 - October 2019"
-          company="Personal Photographer, Assembly"
-          role="Visual Aide"
-        >
-         
-        </WorkTimeline>
+          timeline="Jan 2016 - Feb 2017"
+          company="Centrifuge Group"
+          role="Software Developer"
+        ></WorkTimeline>
+        <br />
+        <br />
+        <WorkTimeline
+          timeline="Jul 2015 - Dec 2015"
+          company="National Productivity Center of Nigeria"
+          role="Software Developer"
+        ></WorkTimeline>
       </div>
     </Container>
   );

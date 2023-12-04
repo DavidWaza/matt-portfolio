@@ -17,15 +17,15 @@ const About: React.FC = () => {
             className={` unbound uppercase px-[10vh] md:px-0 text-center text-[1.3rem] md:text-[4.7rem] grid place-content-center text-[#E25F40]`}
           >
             <p className="proxima text-[#B5AB99] text-[2.6rem] md:text-[5.7rem] ">
-              The Business of Being a{" "}
+              The Art of being a {" "}
             </p>
             <Typewriter
               options={{
                 strings: [
-                  "Photographer.",
-                  "Software Developer.",
-                  "Merchandiser.",
-                  "Serial Entreprenuer.",
+                  "AI Developer",
+                  "Data Engineer",
+                  "Software Developer",
+                  "Prolific Entrepreneur.",
                 ],
                 autoStart: true,
                 loop: true,

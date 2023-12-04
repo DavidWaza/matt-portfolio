@@ -4,7 +4,7 @@ interface WorkProps {
   timeline: string;
   company: string;
   role: string;
-  children: ReactNode;
+  children?: ReactNode;
 }
 const WorkTimeline: FC<WorkProps> = ({ timeline, company, role, children }) => {
   return (
